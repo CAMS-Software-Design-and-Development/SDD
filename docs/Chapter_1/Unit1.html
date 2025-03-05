@@ -1,0 +1,1363 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 2 - Using Objects" href="Unit2.html" /><link rel="prev" title="AP Resources" href="../Resources/AP_Resources.html" />
+
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
+        <title>Unit 1 - Primitive Types - CSA JAVA Course</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">CSA JAVA Course</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">CSA JAVA Course</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources/Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources/AP_Resources.html">AP Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit2.html">Unit 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit3.html">Unit 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit4.html">Unit 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit5.html">Unit 5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit6.html">Unit 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit7.html">Unit 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit8.html">Unit 8</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit9.html">Unit 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit10.html">Unit 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Final_Project.html">Final Project</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/Chapter_1/Unit1.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="unit-1-primitive-types">
+<h1>Unit 1 - Primitive Types<a class="headerlink" href="#unit-1-primitive-types" title="Link to this heading">¶</a></h1>
+<section id="why-programming-why-java">
+<h2>1.1 Why Programming Why Java<a class="headerlink" href="#why-programming-why-java" title="Link to this heading">¶</a></h2>
+<p>Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called <em>MyFirstClass</em>.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print “Hello, World”.</p>
+<p><img alt="first_Java" src="https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG" /></p>
+<p>Notice that with every  { ,  there is a corresponding  } .  You may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name ‘public’ allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a <strong>capital letter</strong>.  The main class will always start with a capital letter.</p>
+<p>In Java there is a “main method” that is required for all java programs.  The code will always be the same.  It looks like:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">public</span></code></strong> is an access specifier.  As you may infer, public is public and everyone will have access to it.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">static</span></code></strong> is a keyword in java.  A <code class="docutils literal notranslate"><span class="pre">static</span></code> method belongs to the class and not to the object (We will learn more about this later!). A <code class="docutils literal notranslate"><span class="pre">static</span></code> method can <strong>only</strong> access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are differences between <code class="docutils literal notranslate"><span class="pre">static</span></code> nested class and <code class="docutils literal notranslate"><span class="pre">non-static</span></code> nested class.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Static method</p></th>
+<th class="head"><p>Non-static method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Definition</p></td>
+<td><p>A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class.</p></td>
+<td><p>Every method in Java defaults to a non-static method without a static keyword preceding it. non-static methods can access any static method and static variable also, without using the object of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Accessing members and methods</p></td>
+<td><p>In the static method, the method can only access only static data members and static methods of another class or the same class but cannot access non-static methods and variables.</p></td>
+<td><p>In the non-static method, the method can access static data members and static methods as well as non-static members and methods of another class or the same class.</p></td>
+</tr>
+<tr class="row-even"><td><p>Binding process</p></td>
+<td><p>The static method uses compile-time or early binding.</p></td>
+<td><p>The non-static method uses runtime or dynamic binding.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Overriding</p></td>
+<td><p>The static method cannot be overridden because of early binding.</p></td>
+<td><p>The non-static method can be overridden because of runtime binding.</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory allocation</p></td>
+<td><p>In the static method, less memory is used for execution because memory allocation happens only once because the static keyword fixed a particular memory for that method in ram.</p></td>
+<td><p>In the non-static method, much memory is used for execution because here memory allocation happens when the method is invoked and the memory is allocated every time when the method is called.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">void</span></code></strong> is also a keyword.  It is a ‘return type’.  What does <code class="docutils literal notranslate"><span class="pre">void</span></code> return? Nothing!  It is used to specify that a method <strong>does not</strong> return anything. If the main method is not void, it will return an error.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code></strong> is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">args</span></code></strong> It is an array of string type.  It stores Java command-line arguments and is an array of type <code class="docutils literal notranslate"><span class="pre">java.lang.String</span></code> class.  The name of the String array is <code class="docutils literal notranslate"><span class="pre">args</span></code>.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).</p>
+<p>Notice that within the main method there is a print statement.  Let’s break down this print statement.</p>
+<p align="center"><b> System.out.println("Hello, World");</b></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>System</b> is a class defined in the java lang package.</br></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>out</b> is a public static field of the PrintStream type.</br></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>println()</b> is invoked by the PrintStream class.</br></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.</p></li>
+</ul>
+<hr class="docutils" />
+<p>Take a look at the diagram below:</p>
+<p><img alt="ClassSuperSub" src="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/5b1567d7-c25b-44cd-95b7-f6d02d61c277" /></p>
+<p>What observations can you make about the diagram?</p>
+<p>A powerful tool that you can use in OOP is the concept of <code class="docutils literal notranslate"><span class="pre">inheritance</span></code>.  <code class="docutils literal notranslate"><span class="pre">Inheritance</span></code> is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as <strong>extending</strong> a class.  The Class that is being extended or “inherited” is called a <strong>superclass</strong>.  The class that extends or “inherits” is referred to as a <strong>subclass</strong>.  We will explore this in more detail in Chapter 4.</p>
+<p align="center">---------------------------------------------------------------------------- </p>
+</section>
+<section id="instances-of-classes">
+<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Link to this heading">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
+</ul>
+<p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
+<p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
+<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
+<hr class="docutils" />
+<p><strong>Mr Potato Head Activity:</strong></p>
+<p>Supplies will be provide for you to complete this activity.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Split into pairs.
+Each pair will create:
+    a potato head character.
+    a list describing what it is, what characteristics it has, and what it can do(actions).
+		write PROPERTIES/ characteristics 
+		write METHODS/ actions
+What are the object oriented concepts to your Mr. Potato Head?
+    Class:
+    Object:
+    Properties:
+    Methods:
+Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  
+Include the Characteristics and actions of the subclass(es).
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// attribute or state</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">white</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// behavior or method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">My</span><span class="w"> </span><span class="n">bicycle</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">painted</span><span class="w"> </span><span class="n">white</span><span class="o">!</span>
+<span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="o">!</span>
+</pre></div>
+</div>
+<details><summary>Sample Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Bicycle</span><span class="w"> </span><span class="n">myBicycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bicycle</span><span class="p">();</span><span class="w">  </span><span class="c1">// Creation of a constructor</span>
+<span class="w">					</span><span class="c1">// We will learn more about this later</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">myBicycle</span><span class="p">.</span><span class="na">pedaling</span><span class="p">();</span><span class="w"> </span><span class="c1">//Calling Method</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Instaniation of the constructor created in the Main Class</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor to initialize gear and color</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bicycle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to pedal the bicycle</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;My bicycle has &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; gear and is painted &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<hr class="docutils" />
+<p><strong>Things to Remember</strong>
+Object-oriented Programming Facts:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Properties are the characteristics of your objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programming focuses on the data represented in the problem</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programs remove details from many programs, making the code rewrite less frequent.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods are the actions that your object can take.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object</p></li>
+</ul>
+<p align="center">---------------------------------------------------------------------------- </p>
+<section id="documentation-with-comments">
+<h3>5.3 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h3>
+<p>Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
+your program.  That’s why it’s important to document your code with comments. A comment is a piece of text that the
+computer will not recognize as code and will not execute. It’s only there for the other programmers to read. While you can write whatever
+you want inside a comment, you should stick to explaining what your code does to document it properly.</p>
+<p>There are three ways in Java to create a comment:</p>
+<p>// Using these two slashes will create a single-line comment.</p>
+<p>/* Using the slash and an asterisk will create a multi-line comment for longer explanations.</br> Be sure to close it with an asterisk, then a slash. */</p>
+<p>/** Using the slash and two asterisks will create a Java API documentation comment. </br>In these comments, you can use tags to specify the parameters of a method and </br>the return values of the method. These comments aren’t as important for the AP CSA curriculum. **/</p>
+<p>&#64;param – explanation of parameter</br>
+&#64;return – explanation of what the method returns</p>
+<p>Example of appropriate comments with a program:</p>
+<p>With <strong>every</strong> program that you submit, I want you to list the following:</p>
+<ul class="simple">
+<li><p>your name/ partners name (if applicable)</p></li>
+<li><p>the date of submission</p></li>
+<li><p>Period</p></li>
+<li><p>and the assignment</p></li>
+</ul>
+<p>Please follow the convention shown below.</br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span>
+<span class="o">*</span> <span class="n">Programmer</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="o">*</span> <span class="n">Date</span><span class="p">:</span>
+<span class="o">*</span> <span class="n">Section</span><span class="p">:</span> <span class="n">Period</span> <span class="c1">#</span>
+<span class="o">*</span> <span class="n">Assignment</span><span class="p">:</span>
+<span class="o">*/</span>
+</pre></div>
+</div>
+</section>
+<section id="assignment-1-1-1">
+<h3>Assignment 1.1.1<a class="headerlink" href="#assignment-1-1-1" title="Link to this heading">¶</a></h3>
+<p><img alt="76b4e00f998549e6a8717c6e5d5f0f1a" src="https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png" /></br>
+Create the happy face image above using the following criteria:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a class</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a main method</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use System.out.print at least two lines</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use System.out.println at least three times</p></li>
+</ul>
+<details><summary> Sample Solution </summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">  	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;----------&quot;</span><span class="p">);</span>
+<span class="w">  	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;--0----0--\n&quot;</span><span class="p">);</span>
+<span class="w">  	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;----__----&quot;</span><span class="p">);</span>
+<span class="w">  	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;-(______)-\n&quot;</span><span class="p">);</span>
+<span class="w">  	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;----------&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="assignment-1-1-2">
+<h3>Assignment 1.1.2<a class="headerlink" href="#assignment-1-1-2" title="Link to this heading">¶</a></h3>
+<p><strong>Personal Timeline</strong>
+For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.</p>
+<p>Include seven meaningful events in your life. No repetitive events such as “started kindergarten, started first grade, etc”.</p>
+<p>Make it look professional. HINT: use \t</br>
+More examples of Escape Sequences can be found <a class="reference external" href="https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit2.html#string-objects-concatenation-literals-and-other-things">here</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Year</span>                 <span class="n">Age</span>                    <span class="n">Description</span>
+<span class="mi">1971</span>              <span class="mi">0</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Born</span> <span class="ow">in</span> <span class="n">Long</span> <span class="n">Beach</span>
+<span class="mi">1976</span>              <span class="mi">5</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Started</span> <span class="n">kindergarten</span>
+<span class="mi">1989</span>             <span class="mi">17</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Graduated</span> <span class="n">high</span> <span class="n">school</span>
+<span class="mi">1995</span>             <span class="mi">24</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Graduated</span> <span class="n">college</span> <span class="n">Long</span> <span class="n">Beach</span> <span class="n">State</span>
+<span class="mi">1998</span>             <span class="mi">27</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Got</span> <span class="n">Married</span>
+<span class="mi">1998</span>             <span class="mi">27</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Began</span> <span class="n">teaching</span> <span class="n">career</span>
+<span class="mi">2021</span>             <span class="mi">50</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">First</span> <span class="n">year</span> <span class="n">at</span> <span class="n">CAMS</span>
+</pre></div>
+</div>
+<details><summary> Sample Solution </summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Year \t\t Age \t\t\t Description&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1971 \t  0 years old \t\t Born in Long Beach&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1976 \t  5 years old \t\t Started Kindergarten&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1989 \t 17 years old \t\t Graduated high school&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1995 \t 24 years old \t\t Graduated college Long Beach State&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1998 \t 27 years old \t\t Got Married&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1998 \t 27 years old \t\t Began teaching career&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2021 \t 50 years old \t\t First year at CAMS&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+</section>
+<section id="variables-and-data-types">
+<h2>1.2 Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Link to this heading">¶</a></h2>
+<p>There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>int</strong> is short for integer deals with whole numbers and uses 32 bits of memory</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>double</strong> is a 64 bit data type that stores decimal numbers</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>boolean</strong> is used to represent true or false values</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>float</strong> is very similar to a double but uses less memory</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>char</strong> is a 16 bit unicode with a minimum value of \u0000 (0) to uffff (65,535)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>byte</strong> is an 8 bit integer with a range from -128 to 127</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>long</strong> is a 64 bit datatype with a minimum value of -2^63 to 2^63</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>short</strong> is a 16 bit datatype with a minimum value of -32,768 to 32,767</p></li>
+</ul>
+<p>Non-primitive data types include a String, Arrays and Classes.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>String</strong> is a data type that is a collection of characters encompassed by quotes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Arrays</strong> are used to store multiple values (think ‘list’)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Class</strong> is an object constructor, blueprint, for creating objects.</p></li>
+</ul>
+<p><strong>Variable Naming Convention</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Always choose a name that indicates the purpose of the variable</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A variable cannot begin with a number</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A variable must not have spaces</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A variable cannot begin with any special characters</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A variable cannot have the same name as a Java keyword</p></li>
+</ul>
+<p>When you declare a variable, you must state the variable type along with the variable name followed by the value assignment to the variable.</br>  For example:  <em>int height = 72;</em></br></br>
+Once you have declared the variable type, you <b> do not need to do it again </b> to reassign a value to the variable.</br> Example:  </br><em>int height = 72;</br>height = 70;</em></br></br>
+If you declare a variable as <em>final</em> you cannot change the value of it.  We can refer to the <em>final</em> variable as immutable (unchanging).  Another variable norm is that <em>final</em> variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br></p>
+<section id="assignment-1-2-1">
+<h3>Assignment 1.2.1<a class="headerlink" href="#assignment-1-2-1" title="Link to this heading">¶</a></h3>
+<p><strong>Allowance</strong>
+Write a program that will determine who receives an allowance or not.  Use the information below as a guide:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Allowance is always $30.00/ week</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Non-teenagers do not receive an allowance</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Jon is 16 years old</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Ed is 12 years old</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Michael was born fours years before Jon</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print out who receives an allowance and who does not by using an int, double and boolean variables.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">JonsAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">Teenager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">allowance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.00</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Jon&#39;s age is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">JonsAge</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eligible for allowance? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Teenager</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Jon&#39;s weekly allownace is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">allowance</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Example Output:</strong><br>
+Jon’s age is 16<br>
+Eligible for allowance? True<br>
+Jon’s weekly allowance is $30.00<br>
+<br>
+Ed’s age is 12<br>
+Eligible for allowance? False<br>
+Ed’s weekly allowance is $0.00<br>
+<br>
+Michael’s age is 20<br>
+Eligible for allowance? False<br>
+Michael’s weekly allowance is $0.00<br></p>
+</section>
+<section id="assignment-1-2-2">
+<h3>Assignment 1.2.2<a class="headerlink" href="#assignment-1-2-2" title="Link to this heading">¶</a></h3>
+<p>Use a Scanner object to create an input feature in your program.  Click on <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx">Scanner_Input</a> to learn more.  An example of a Scanner Input can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/JavaScannerBasics#Main.java">here</a>.  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user’s response, you will return (print statement) a sentence that includes the data types listed above.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> string</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> int</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> double</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> boolean</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> print statement that includes all for data types</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="expressions-and-assignment-statements">
+<h2>1.3 Expressions and Assignment Statements<a class="headerlink" href="#expressions-and-assignment-statements" title="Link to this heading">¶</a></h2>
+<p>Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Symbol</p></th>
+<th class="head text-center"><p>Name</p></th>
+<th class="head text-center"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>*</p></td>
+<td class="text-center"><p>Multiplication</p></td>
+<td class="text-center"><p>multiply two values together</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>/</p></td>
+<td class="text-center"><p>Division</p></td>
+<td class="text-center"><p>divide two values</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%</p></td>
+<td class="text-center"><p>Modulo</p></td>
+<td class="text-center"><p>the remainder after dividing two values</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>+</p></td>
+<td class="text-center"><p>Addition</p></td>
+<td class="text-center"><p>add two values together</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>-</p></td>
+<td class="text-center"><p>Subtraction</p></td>
+<td class="text-center"><p>subtract two values</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Note</strong> When you divide an integer by zero your program will return an <i>ArthmeticException</i> error.</p>
+<p><strong>Please Excuse My Dear Aunt Sally</strong>
+In Java, the order of operation works pretty much the same with the exception of the modulo.</br>Take for example the following math equation: <strong>5 + 12 * 18 - 10 / 2 % 2</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Step</p></th>
+<th class="head text-center"><p>Operation</p></th>
+<th class="head text-center"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>Multiply 12 * 18</p></td>
+<td class="text-center"><p>= 216</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>Divide 10 / 2</p></td>
+<td class="text-center"><p>= 5</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>Modulo 5 % 2</p></td>
+<td class="text-center"><p>= 1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>Add 5 + 216</p></td>
+<td class="text-center"><p>= 221</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>Subtract 221 - 1</p></td>
+<td class="text-center"><p>= 220</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details><summary>JAVA Order of Operations</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>P</strong>arentheses</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>A</strong>rray access</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>M</strong>ember access</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>U</strong>nary</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>C</strong>ast</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>O</strong>bject creation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>M</strong>ultiplication</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>D</strong>ivision</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R</strong>emainder</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>A</strong>ddition</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>C</strong>oncatentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>S</strong>ubtraction</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>S</strong>hift</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>R</strong>elational</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>E</strong>quality</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<hr class="docutils" />
+<section id="assignment-1-3-1">
+<h3>Assignment 1.3.1<a class="headerlink" href="#assignment-1-3-1" title="Link to this heading">¶</a></h3>
+<p><strong>Calculate your weight on Jupiter</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">expression</span> <span class="n">F</span><span class="o">=</span><span class="n">ma</span> <span class="n">allows</span> <span class="n">you</span> <span class="n">to</span> <span class="n">calculate</span> <span class="n">your</span> <span class="n">weight</span> <span class="p">(</span><span class="ow">in</span> <span class="n">newtons</span><span class="p">)</span> <span class="n">based</span> <span class="n">on</span> <span class="n">your</span> <span class="n">mass</span>
+<span class="p">(</span><span class="ow">in</span> <span class="n">kilograms</span><span class="p">)</span> <span class="n">the</span> <span class="n">acceleration</span> <span class="n">due</span> <span class="n">to</span> <span class="n">gravity</span> <span class="n">on</span> <span class="n">Earth</span> <span class="p">(</span><span class="mf">9.81</span> <span class="n">m</span><span class="o">/</span><span class="n">sec2</span><span class="p">)</span><span class="o">.</span> <span class="n">A</span> <span class="n">typical</span> <span class="n">mass</span> <span class="n">of</span> <span class="n">a</span>
+<span class="n">human</span> <span class="n">might</span> <span class="n">be</span> <span class="mf">58.9</span> <span class="n">kg</span><span class="o">.</span>
+
+<span class="n">F</span> <span class="o">=</span> <span class="n">ma</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="mf">58.9</span> <span class="n">kg</span><span class="p">)(</span><span class="mf">9.81</span> <span class="n">m</span><span class="o">/</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">F</span> <span class="o">=</span> <span class="mi">578</span> <span class="n">Newtons</span>
+<span class="n">One</span> <span class="n">newton</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="mf">0.225</span> <span class="n">lbs</span><span class="o">.</span> <span class="n">So</span> <span class="n">on</span> <span class="n">Earth</span><span class="p">,</span> <span class="n">this</span> <span class="n">human</span> <span class="n">weighs</span> <span class="mi">130</span> <span class="n">lbs</span><span class="o">.</span>
+
+<span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="mi">578</span> <span class="n">N</span><span class="p">)(</span><span class="mf">0.225</span> <span class="n">lbs</span><span class="o">/</span> <span class="mi">1</span> <span class="n">N</span><span class="p">)</span> <span class="o">=</span> <span class="mi">130</span> <span class="n">lbs</span>
+
+<span class="n">But</span> <span class="n">Jupiter</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">massive</span> <span class="n">than</span> <span class="n">the</span> <span class="n">Earth</span><span class="o">.</span> <span class="n">The</span> <span class="n">force</span> <span class="n">of</span> <span class="n">gravity</span> <span class="ow">is</span> <span class="n">stronger</span><span class="p">,</span> <span class="n">making</span> <span class="n">the</span>
+<span class="n">acceleration</span> <span class="n">due</span> <span class="n">to</span> <span class="n">gravity</span> <span class="n">much</span> <span class="n">larger</span> <span class="p">(</span><span class="mf">24.79</span> <span class="n">m</span><span class="o">/</span><span class="n">sec</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span> <span class="n">Below</span> <span class="ow">is</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">variables</span> <span class="n">that</span>
+<span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">program</span><span class="o">.</span>
+
+<span class="n">Using</span> <span class="n">the</span> <span class="n">equation</span> <span class="n">below</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">determine</span> <span class="n">what</span> <span class="n">your</span> <span class="n">weight</span> <span class="n">on</span> <span class="n">Jupiter</span> <span class="n">would</span> <span class="n">be</span> <span class="ow">in</span> <span class="n">pounds</span>
+<span class="ow">and</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">to</span> <span class="n">worry</span> <span class="n">about</span> <span class="n">converting</span> <span class="n">units</span><span class="o">.</span>
+
+<span class="p">(</span><span class="n">weightOnJupiter</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">weightOnEarth</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span> <span class="n">x</span> <span class="p">(</span><span class="n">jupiterGravity</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">earthGravity</span><span class="p">)</span>
+
+<span class="n">weightOnJupiter</span> <span class="o">=</span> <span class="mi">130</span>
+<span class="n">earthGravity</span> <span class="o">=</span> <span class="mf">9.81</span> 
+<span class="n">jupiterGravity</span> <span class="o">=</span> <span class="mf">24.79</span>
+<span class="o">**</span><span class="n">weightOnJupiter</span> <span class="o">=</span> <span class="n">weightOnJupiter</span> <span class="o">/</span> <span class="n">earthGravity</span> <span class="o">*</span> <span class="n">jupiterGravity</span><span class="o">**</span>
+
+</pre></div>
+</div>
+<p><strong>Using the chart below, create a program called GalaxyWeight that outputs information of the user’s weight
+on four different planets and takes the average of those weights.  You will use the <i>scanner class</i> for
+this assignment.</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Planet</p></th>
+<th class="head text-center"><p>Acceleration Due to Gravity (m/sec^2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Earth</p></td>
+<td class="text-center"><p>9.81</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Mercury</p></td>
+<td class="text-center"><p>3.59</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Venus</p></td>
+<td class="text-center"><p>8.87</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Mars</p></td>
+<td class="text-center"><p>3.711</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Jupiter</p></td>
+<td class="text-center"><p>24.79</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Saturn</p></td>
+<td class="text-center"><p>11.08</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Uranus</p></td>
+<td class="text-center"><p>10.67</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Neptune</p></td>
+<td class="text-center"><p>11.15</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details><summary>Sample Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">earthGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">mercuryGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.59</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">venusGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.87</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">marsGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.711</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your weight in pounds:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">weightOnMercury</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mercuryGravity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">earthGravity</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">weightOnVenus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">venusGravity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">earthGravity</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">weightOnMars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">marsGravity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">earthGravity</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">weightOnInnerPlanets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOnVenus</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOnMars</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOnMercury</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Your weight on Mercury is &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">weightOnMercury</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lbs.&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Your weight on Venus is &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">weightOnVenus</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lbs.&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Your weight on Mars is &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">weightOnMars</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lbs. \n&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Your average weight for the Inner Planets is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOnInnerPlanets</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;lbs.&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">**</span><span class="n">Sample</span><span class="w"> </span><span class="n">Output</span><span class="p">:</span><span class="o">**</span>
+
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">pounds</span><span class="p">:</span>
+<span class="mi">150</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Mercury</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">54.89296636085626</span><span class="w"> </span><span class="n">lbs</span><span class="p">.</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Venus</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">135.62691131498468</span><span class="w"> </span><span class="n">lbs</span><span class="p">.</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Mars</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">56.74311926605504</span><span class="w"> </span><span class="n">lbs</span><span class="p">.</span>
+
+<span class="n">Your</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Inner</span><span class="w"> </span><span class="n">Planets</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">99.31574923547399</span><span class="n">lbs</span><span class="p">.</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="assignment-1-3-2">
+<h3>Assignment 1.3.2<a class="headerlink" href="#assignment-1-3-2" title="Link to this heading">¶</a></h3>
+<p><strong>Simple Math</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a program that will ask the user for two distinct numbers (integers)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the scanner class to receive input from the user</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Store those values and perform some basic operations with those numbers</p></li>
+</ul>
+<p><strong>Example Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span><span class="p">:</span>
+<span class="mi">20</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="p">:</span>
+<span class="mi">5</span>
+
+<span class="nl">Sum</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span>
+<span class="nl">Difference</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span>
+<span class="nl">Product</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="nl">Dividing</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">remainder</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+</div>
+<details><summary>Sample Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"> </span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// declare two integers a and b</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// asks the user for the integers and stores it in a and b</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the first integer:&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">   </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the second integer:&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;When you add the two numbers, the sum is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;When you subtract the two numbers, the difference is  &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;When you multiply the two numbers, the product is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;When you divide the two numbers, the answer is  &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; with a remainder &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">));</span>
+<span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+</section>
+<hr class="docutils" />
+<section id="compound-assignment-operators">
+<h2>1.4 Compound Assignment Operators<a class="headerlink" href="#compound-assignment-operators" title="Link to this heading">¶</a></h2>
+<p>In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Will this program run as written?  Why or why not?</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//common programming convention</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nl">Output</span><span class="p">:</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Compound assignment operators</span>
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial value</span>
+<span class="w">		</span><span class="n">b</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial value</span>
+<span class="w">		</span><span class="n">b1</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">330</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial value</span>
+<span class="w">		</span><span class="n">b2</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">127</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial value</span>
+<span class="w">		</span><span class="n">b3</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b2</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b3</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">130</span>
+<span class="mi">1200</span>
+<span class="mi">300</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement.
+To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.</p>
+<p>In Java, a strong convention is to declare variables close to where they are first used, at the beginning of a code block.
+A code block is denoted by curly braces, { }.  Notice that the print statement uses quotes around ‘x = ‘ followed by plus(+) sign.
+This is referred to as a <strong>concatenation operator</strong> where you can add a string literal to a variable.</p>
+<p>Java like other programs has simplified the compound operators.  <strong>Compound Assignment Operators</strong> performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:</p>
+<p>Java supports 11 compound-assignment operators, but for this course we will use just five.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="o">+=</span><span class="w">   </span><span class="n">assigns</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">addition</span><span class="p">.</span>
+<span class="w"> </span><span class="o">-=</span><span class="w">   </span><span class="n">assigns</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">subtraction</span><span class="p">.</span>
+<span class="w"> </span><span class="o">*=</span><span class="w">   </span><span class="n">assigns</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">multiplication</span>
+<span class="w"> </span><span class="o">/=</span><span class="w">   </span><span class="n">assigns</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">division</span><span class="p">.</span>
+<span class="w"> </span><span class="o">%=</span><span class="w">   </span><span class="n">assigns</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">remainder</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">division</span><span class="p">.</span>
+</pre></div>
+</div>
+<section id="assignment-1-4-1">
+<h3>Assignment 1.4.1<a class="headerlink" href="#assignment-1-4-1" title="Link to this heading">¶</a></h3>
+<p><strong>Compound Operators</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11.5</span><span class="p">;</span><span class="w">  </span><span class="c1">// I will soon be halfway through my junior year.</span>
+
+<span class="w">    </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">years</span><span class="p">;</span>
+<span class="w">    </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 2) Use people that are in different grades to validate your program can work for different school grades.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 4)The average years you and your friends, siblings, neighbors have been in school.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 6) The average days you have all spent in school.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sample</span> <span class="n">Output</span><span class="p">:</span>
+<span class="n">I</span> <span class="n">have</span> <span class="mf">11.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">0.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">11.5</span>
+<span class="n">My</span> <span class="n">best</span> <span class="n">friend</span> <span class="n">has</span> <span class="mf">10.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">1.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">22.0</span>
+<span class="n">My</span> <span class="n">sister</span> <span class="n">has</span> <span class="mf">8.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">3.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">30.5</span>
+<span class="n">My</span> <span class="n">neighbor</span> <span class="n">has</span> <span class="mf">5.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">6.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">36.0</span>
+
+<span class="n">Average</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span><span class="p">:</span> <span class="mf">9.0</span>
+<span class="n">Total</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">school</span><span class="p">:</span> <span class="mf">6480.0</span>
+<span class="n">Average</span> <span class="n">days</span> <span class="n">per</span> <span class="n">person</span><span class="p">:</span> <span class="mf">1620.0</span> 
+</pre></div>
+</div>
+<p align="center">---------------------------------------------------------------------------- </p>
+</section>
+<section id="assignment-1-4-2">
+<h3>Assignment 1.4.2<a class="headerlink" href="#assignment-1-4-2" title="Link to this heading">¶</a></h3>
+<p><strong>Average Test Score</strong>
+Directions: Write two programs that will do the following:</p>
+<p><strong>Average Test Score</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for four test scores</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> calculate and show the result</p></li>
+</ul>
+<p><strong>Cashier Totals</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of burgers sold and how much each one costs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of fries sold and how much each costs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total items sold</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total sales</p></li>
+</ul>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter the first test score:
+95
+Enter the second test score:
+87
+Enter the third test score:
+74
+Enter the forth test score:
+75
+
+Average test score: 82.75%
+---------------------------------
+Enter the number of burgers ordered:
+10
+Price of a burger:
+5.65
+Enter the number of fries ordered:
+4
+Price of fries:
+1.95
+
+Total Items Sold: 14
+Total Sales: $64.3
+</pre></div>
+</div>
+</section>
+</section>
+<section id="casting-and-range-of-variables">
+<h2>1.5 Casting and Range of Variables<a class="headerlink" href="#casting-and-range-of-variables" title="Link to this heading">¶</a></h2>
+<p>There are some unique features to Java that help programmers create programs that are flexible in how they display data.<br />
+We learned earlier that we need to declare a variable by it’s type.  It can be an int or a double.  As you may remember,
+an int is any whole negative or positive number.</p>
+<p>A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.<br />
+We can convert the double by declaring a new variable that changes the double to an int.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">98.6</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">newTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">temp</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not <strong>rounded</strong> it is <em>truncated</em>.  Java does not round unless you tell it to round.</p>
+<p>You will need to be familiar with some terms:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>widening</strong> - converting from a smaller data type (int) to a larger data type (double).</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">byte</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">short</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">char</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">int</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">long</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">float</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>narrowing</strong> - converting a larger data type (double) to a smaller data type (int).</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">double</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">float</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">long</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">int</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">char</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">short</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">byte</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>In this instance, we ‘narrowed’ the value of temp.  There is another term that you need to be familiar with and it is called <strong>casting</strong>.  Casting is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing information.</p>
+<p>Take a look at this program:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
+
+<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
+
+<span class="n">Sample</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.75</span>
+</pre></div>
+</div>
+<p>If you were to print the variables <code class="docutils literal notranslate"><span class="pre">eggs</span></code> and <code class="docutils literal notranslate"><span class="pre">dozen</span></code>, you would see that the values are 9 &amp; 12 respectively.</p>
+</p>
+</details>
+<section id="assignment-1-5-1">
+<h3>Assignment 1.5.1<a class="headerlink" href="#assignment-1-5-1" title="Link to this heading">¶</a></h3>
+<p>You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour!:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span> 
+ <span class="o">*</span> <span class="n">Activity</span> <span class="mf">1.1.5</span>
+ <span class="o">*/</span>
+<span class="n">public</span> <span class="k">class</span> <span class="nc">FivePlanetTravel</span>
+<span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="o">//</span> <span class="n">theplanets</span><span class="o">.</span><span class="n">org</span> <span class="n">average</span> <span class="n">distance</span> <span class="kn">from</span> <span class="nn">earth</span> <span class="n">to</span> <span class="n">the</span> <span class="n">planets</span>
+    <span class="nb">int</span> <span class="n">mercury</span> <span class="o">=</span> <span class="mi">56974146</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">venus</span> <span class="o">=</span> <span class="mi">25724767</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">mars</span> <span class="o">=</span> <span class="mi">48678219</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">jupiter</span> <span class="o">=</span> <span class="mi">390674710</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">saturn</span> <span class="o">=</span> <span class="mi">792248270</span><span class="p">;</span>
+    <span class="o">//</span> <span class="n">number</span> <span class="n">of</span> <span class="n">planets</span> <span class="n">to</span> <span class="n">visit</span>
+    <span class="nb">int</span> <span class="n">numPlanets</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="o">//</span> <span class="n">speed</span> <span class="n">of</span> <span class="n">light</span> <span class="ow">and</span> <span class="n">our</span> <span class="n">speed</span>
+    <span class="nb">int</span> <span class="n">lightSpeed</span> <span class="o">=</span>  <span class="mi">670616629</span><span class="p">;</span>
+    <span class="n">lightSpeed</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="o">//</span> <span class="n">total</span> <span class="n">travel</span> <span class="n">time</span>
+    <span class="n">double</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="o">/*</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">*/</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Example Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span>
+<span class="w"> </span><span class="n">Mercury</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="mi">11</span><span class="w"> </span><span class="n">hours</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">16.0</span>
+
+<span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span>
+<span class="w"> </span><span class="n">Mercury</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8495784968765016</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mf">0.38359870949813324</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7258725410056196</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mf">5.825604352006665</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="w"> </span><span class="mf">11.813728535388819</span><span class="w"> </span><span class="n">hours</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">19.59838263477574</span>
+</pre></div>
+</div>
+<p><em>Your ouput should look like the example above.  I am not asking you to find the <strong>average</strong> for this assignment.</em></p>
+<p>You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.</p>
+<details><summary> Sample Output</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FivePlanetTravel</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// theplanets.org average distance from earth to the planets</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mercury</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">56974146</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">venus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25724767</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">48678219</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">jupiter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">390674710</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">saturn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">792248270</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// speed of light and our speed</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mi">670616629</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// total travel time</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// number of planets to visit</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numPlanets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Auto-widen version</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Travel time to ...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">mercury</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Mercury &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">   </span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">venus</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Venus: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">mars</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Mars: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">jupiter</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Jupiter: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">saturn</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Saturn:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total travel time:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Manually cast version</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Travel time to ...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Mercury: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mercury</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mercury</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Venus: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">venus</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">venus</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Mars: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mars</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w">  </span><span class="n">mars</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Jupiter: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jupiter</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">jupiter</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; Saturn: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saturn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hours&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">saturn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">lightSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total travel time:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="numbers-riddle-project">
+<h3>Numbers Riddle Project<a class="headerlink" href="#numbers-riddle-project" title="Link to this heading">¶</a></h3>
+<p>In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.</p>
+<p>Your program will include:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use of the <a class="reference external" href="https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841">camelCase</a> naming convention</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Both multiline and inline comments – <strong>see below</strong></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The print and printtln methods</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Variables (appropriately named)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Arithmetic expressions</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The compound assignment operator</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Conversion between int and double data types</p></li>
+</ul>
+<p><strong>The Numbers Riddle</strong></p>
+<p align="center">Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three! </p>
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="c1">// choose an integer</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">// double it</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="c1">// add six</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="c1">// divide it in half</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="c1">// subtract the number you started with</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="c1">// answer is always three!</span>
+</pre></div>
+</div>
+<p><strong>Important:</strong> No shortcuts! You know the answer to the riddle will always be three, but your program is being used to test and validate the riddle. You should print the result of all calculations, not just “3.”</p>
+<p><strong>Requirements of this project</strong></p>
+<p>Your program should allow any number to be stored in a variable and printed out. Then, the program should output its double, output six added to it, output that number divided in half, and, finally, output that number subtracted by the original number. In this way, the program displays each calculation, and of course, the final result of three.</p>
+<p>Looking back at previous programs and the requirements stated above, you know you will need:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a class definition header that matches the file name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> the main method of the program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a variable defined as the “starting number you choose”</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> You may use a <code class="docutils literal notranslate"><span class="pre">scanner</span></code> class</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> six variables representing integer and double data types and positive, negative, and zero values</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> an algorithm(s) that processes the chosen number</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a print statement displaying the number you chose</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a print statement displaying each calculation and the final result</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> comments in your code</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> use of camelCase when appropriate</p></li>
+</ul>
+<p><strong>Test Cases</strong>
+Create variables and choose numbers that match the following six number types to verify your program works for each.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Positive Integer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Negative Integer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Zero</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> One</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Positive Double</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Negative Double</p></li>
+</ul>
+<p><strong>Document and Present</strong></p>
+<details><summary>Comments Requirement</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
+<span class="cm"> |   Assignment:  Project 1.6 Numbers Riddle</span>
+<span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
+<span class="cm"> |      </span>
+<span class="cm"> |  Course Name:  AP Computer Science A</span>
+<span class="cm"> |   Instructor:  Mr. Jonathan Virak</span>
+<span class="cm"> |     Due Date:  [Due Date and Time]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |</span>
+<span class="cm"> |     Language:  [java]           </span>
+<span class="cm"> |                </span>
+<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
+<span class="cm"> |                details here, otherwise clearly state that you know</span>
+<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> *===========================================================================*/</span>
+</pre></div>
+</div>
+</details>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="Unit2.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Unit 2 - Using Objects</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../Resources/AP_Resources.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">AP Resources</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Mr. V
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Unit 1 - Primitive Types</a><ul>
+<li><a class="reference internal" href="#why-programming-why-java">1.1 Why Programming Why Java</a></li>
+<li><a class="reference internal" href="#instances-of-classes">2.1 Instances of Classes</a><ul>
+<li><a class="reference internal" href="#documentation-with-comments">5.3 Documentation with Comments</a></li>
+<li><a class="reference internal" href="#assignment-1-1-1">Assignment 1.1.1</a></li>
+<li><a class="reference internal" href="#assignment-1-1-2">Assignment 1.1.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#variables-and-data-types">1.2 Variables and Data Types</a><ul>
+<li><a class="reference internal" href="#assignment-1-2-1">Assignment 1.2.1</a></li>
+<li><a class="reference internal" href="#assignment-1-2-2">Assignment 1.2.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#expressions-and-assignment-statements">1.3 Expressions and Assignment Statements</a><ul>
+<li><a class="reference internal" href="#assignment-1-3-1">Assignment 1.3.1</a></li>
+<li><a class="reference internal" href="#assignment-1-3-2">Assignment 1.3.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compound-assignment-operators">1.4 Compound Assignment Operators</a><ul>
+<li><a class="reference internal" href="#assignment-1-4-1">Assignment 1.4.1</a></li>
+<li><a class="reference internal" href="#assignment-1-4-2">Assignment 1.4.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a><ul>
+<li><a class="reference internal" href="#assignment-1-5-1">Assignment 1.5.1</a></li>
+<li><a class="reference internal" href="#numbers-riddle-project">Numbers Riddle Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>

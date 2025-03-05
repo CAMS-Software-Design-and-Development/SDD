@@ -1,0 +1,1898 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 4" href="../Chapter_2/Unit4.html" /><link rel="prev" title="Unit 2 - Using Objects" href="Unit2.html" />
+
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
+        <title>Unit 3 - CSA JAVA Course</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">CSA JAVA Course</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">CSA JAVA Course</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources/Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources/AP_Resources.html">AP Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Unit1.html">Unit 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit2.html">Unit 2</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit4.html">Unit 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit5.html">Unit 5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit6.html">Unit 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit7.html">Unit 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit8.html">Unit 8</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit9.html">Unit 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit10.html">Unit 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Final_Project.html">Final Project</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/Chapter_1/Unit3.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="unit-3">
+<h1>Unit 3<a class="headerlink" href="#unit-3" title="Link to this heading">¶</a></h1>
+<section id="logical-operators">
+<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">¶</a></h2>
+<p>Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false.  For example, using the <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> comparison, if the first expression is false, the value of the second expression doesn’t matter. Likewise, for the <code class="docutils literal notranslate"><span class="pre">||</span></code> comparison, if the first expression is true, the second value doesn’t matter.  When the result of a logical expression using <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> or <code class="docutils literal notranslate"><span class="pre">||</span></code> can be determined by evaluating only the first Boolean operand, the second is not executed or evaluated. This is known as <em>short-circuited</em>.  This is used extensively to test for several conditions for making a decision.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AND Operator ( &amp;&amp; ) – if( a &amp;&amp; b ) [if true execute else don’t]
+OR Operator ( || ) – if( a || b) [if one of them is true execute else don’t]
+NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
+</pre></div>
+</div>
+</section>
+<section id="boolean-expressions">
+<h2>3.1 Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Understand Boolean expressions.</p></li>
+<li><p>Use relational operators to compute the value of a Boolean expression.</p></li>
+</ul>
+<p>George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Relational Operator</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Boolean Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>a &lt; b</p></td>
+<td><p>a less than b</p></td>
+<td><p>Equates to ‘true’ if a is less than b,’false’ otherwise</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a &lt;= b</p></td>
+<td><p>a less than or equal to b</p></td>
+<td><p>Equates to ‘true’ if a is less than or equal to b, ‘false’ otherwise.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a &gt; b</p></td>
+<td><p>a greater than b</p></td>
+<td><p>Equates to ‘true’ if a is greater than b, ‘false’ otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a &gt;= b</p></td>
+<td><p>a greater than or equal to b</p></td>
+<td><p>Equates to ‘true’ if a is greater than or equal to b, ‘false’ otherwise.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a == b</p></td>
+<td><p>a equals b*</p></td>
+<td><p>Equates to ‘true’ if a has the same value as b.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a != b</p></td>
+<td><p>a does not equal b</p></td>
+<td><p>Equates to ‘true’ if a does not have the same value as b, ‘false’ otherwise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* Sometimes this comparison can be misleading.  <code class="docutils literal notranslate"><span class="pre">==</span></code> can look at the value <code class="docutils literal notranslate"><span class="pre">a</span></code> and compare it to <code class="docutils literal notranslate"><span class="pre">b</span></code> to see if it is located at the same memory location.</p>
+<p><img alt="Boolean_1" src="https://user-images.githubusercontent.com/12989939/197055817-30b782a8-c6fb-4610-bf3c-03db4db06cf5.PNG" /></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>!A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="Boolean_2" src="https://user-images.githubusercontent.com/12989939/197055928-de3c4faa-0c52-4284-9c9e-e9f93b26225e.PNG" /></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A || B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>false</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>false</p></td>
+<td><p>true</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>true</p></td>
+<td><p>false</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>true</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple">
+<li><p>Given <code class="docutils literal notranslate"><span class="pre">boolean</span></code> <strong>variables</strong> <code class="docutils literal notranslate"><span class="pre">a</span></code> ,<code class="docutils literal notranslate"><span class="pre">b</span></code> , and <code class="docutils literal notranslate"><span class="pre">c</span></code>, fill in the truth table for <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;&amp;</span> <span class="pre">(B</span> <span class="pre">||</span> <span class="pre">c)</span></code>.</p></li>
+</ol>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>b || c</p></th>
+<th class="head"><p>a &amp;&amp; (b || c)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details><summary>Solution</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>b || c</p></th>
+<th class="head"><p>a &amp;&amp; (b || c)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<p>In Java logical operators, if the evaluation of a logical expression exits in between before complete evaluation, then it is known as <strong>Short-circuit</strong>. A <em>short circuit</em> happens because the result is clear even before the complete evaluation of the expression, and the result is returned. Short circuit evaluation avoids unnecessary work and leads to efficient processing.</p>
+<p><strong>&amp;&amp; short circuit:</strong>
+In the case of &amp;&amp;, the expression is evaluated until we get one false result because the result will always be false, independent of the further conditions. If there is an expression with &amp;&amp;(logical AND), and the first operand itself is false, then a short circuit occurs, the further expression is not evaluated, and false is returned.</p>
+<p><strong>|| short circuit:</strong>
+In the case of ||, the expression is evaluated until we get one true result because the result will always be true, independent of the further conditions. If there is an expression with ||(logical OR), and the first operand itself is true, a short circuit occurs, evaluation stops, and true is returned.</p>
+<ol class="arabic simple" start="2">
+<li><p>Which of the following expressions will short circuit when <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">pink</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>?  Why?</p></li>
+</ol>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ! happy &amp;&amp; pink</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> happy | | pink</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> pink | | happy</p></li>
+</ul>
+<details><summary>Solution</summary>
+<p>An <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">false</span></code>. <code class="docutils literal notranslate"><span class="pre">!happy</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">&amp;&amp;</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>An || statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">||</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</details>
+<section id="activity-3-1-1">
+<h3>Activity 3.1.1<a class="headerlink" href="#activity-3-1-1" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13270729/Boolean_Exercises_Revised.docx">Boolean_Exercises_Revised.docx</a></p>
+</section>
+<section id="activity-3-1-2">
+<h3>Activity 3.1.2<a class="headerlink" href="#activity-3-1-2" title="Link to this heading">¶</a></h3>
+<p><strong>Write the body of the method given the following requirements.</strong></p>
+<p>You have three numbers to work with: <code class="docutils literal notranslate"><span class="pre">ints</span> <span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If the numbers are all different from each other, print “unique”.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If all of the numbers are the same, print “boring”.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If two of the numbers are the same, print “twins!”.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suchFun</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13352571/FRQ_FreeResponse_Template_vrs2.pdf">FRQ_FreeResponse_Template.pdf</a></p>
+</section>
+<section id="activity-3-1-3">
+<h3>Activity 3.1.3<a class="headerlink" href="#activity-3-1-3" title="Link to this heading">¶</a></h3>
+<p><strong>Rent-a-Car:</strong></p>
+<ul class="simple">
+<li><p>ask the user to enter their name, age, and how much money they have</p></li>
+<li><p>write conditional statements using logical operators, to determine whether the user can rent a car</p>
+<ul>
+<li><p>a person must be 25 or older to rent a car</p>
+<ul>
+<li><p>if a person is old enough and has enough money ($999), print they can rent a car</p></li>
+<li><p>if a person is old enough but does not have enough money, tell them to come back with more money</p></li>
+</ul>
+</li>
+<li><p>if a person is not old enough, let them know and tell them when they can come back</p></li>
+</ul>
+</li>
+<li><p>take care to match the sample outputs exactly</p></li>
+<li><p>must pass all 3 tests to submit the assignment</p></li>
+<li><p>click submit here on repl after passing the tests, and type done on Canvas and submit on Canvas</p></li>
+<li><p>submit your replit code</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//starter code</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">		</span><span class="c1">//your code goes below</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output 1:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Maxim</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">28</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mf">500.12</span>
+<span class="n">Maxim</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">visit</span><span class="w"> </span><span class="n">us</span><span class="w"> </span><span class="n">again</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">money</span><span class="p">.</span>
+</pre></div>
+</div>
+<p><strong>Sample Output 2:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Jorge</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">30</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mi">1000</span>
+<span class="n">Jorge</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">happy</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rent</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="w">  </span>
+</pre></div>
+</div>
+<p><strong>Sample Output 3:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Erika</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">17</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mi">542364</span>
+<span class="n">Erika</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">young</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rent</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">car</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">visit</span><span class="w"> </span><span class="n">us</span><span class="w"> </span><span class="n">again</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="n">old</span><span class="p">.</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-3-1-4">
+<h3>Activity 3.1.4<a class="headerlink" href="#activity-3-1-4" title="Link to this heading">¶</a></h3>
+<p><strong>Instructions</strong>
+Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values using: &lt;, &lt;=, =, !=, &gt;, and &gt;=. Evaluate if the expression is true or false.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">Input</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">LESS</span><span class="w"> </span><span class="n">THAN</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">LESS</span><span class="w"> </span><span class="n">THAN</span><span class="o">/</span><span class="w"> </span><span class="n">EQUAL</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">EQUAL</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">EQUAL</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">GREATER</span><span class="w"> </span><span class="n">THAN</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="mf">4.0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">GREATER</span><span class="w"> </span><span class="n">THAN</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">EQUAL</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">5.0</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="if-statements-and-control-flow">
+<h2>3.2 If Statements and Control Flow<a class="headerlink" href="#if-statements-and-control-flow" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Gain an understanding of how to control program flow with <code class="docutils literal notranslate"><span class="pre">if</span></code> statements.</p></li>
+<li><p>Start to implement control flow in more complex programs.</p></li>
+</ul>
+<p>In Java, decision driven statements are used in conjunction with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.</p>
+<ul class="simple">
+<li><p>Less than: a &lt; b</p></li>
+<li><p>Less than or equal to: a &lt;= b</p></li>
+<li><p>Greater than: a &gt; b</p></li>
+<li><p>Greater than or equal to: a &gt;= b</p></li>
+<li><p>Equal to a == b</p></li>
+<li><p>Not Equal to: a != b</p></li>
+</ul>
+<p>You can use these conditions to perform different actions based on the decisions from user input.</p>
+<p>The Java if statement is the most simple-decision making statement.  Java has the following conditional statements:</p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">if</span></code> keyword to specify a block of code to be executed, if a condition is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> keyword to specify a new condition to test, if the first condition is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword to specify a block of code to be executed, if the above conditions are <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+</ul>
+<p><strong>Basic <code class="docutils literal notranslate"><span class="pre">if</span></code> statement format</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">   </span><span class="c1">// Statements to execute if</span>
+<span class="w">   </span><span class="c1">// condition is true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Example 1</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  	    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 &lt; 5&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This statement is outside of the if statement.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Example 2</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Your Name Here!&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="w">            </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Example 3</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">Yes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">		</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Yes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">		</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">No</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Advantages of the <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement –</p>
+<p><strong>Conditional execution</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement allows code to be executed conditionally based on the result of a Boolean expression. This provides a way to make decisions and control the flow of a program based on different inputs and conditions.</p>
+<p><strong>Readability</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement makes code more readable by clearly indicating when a particular block of code should be executed. This makes it easier for others to understand and maintain the code.</p>
+<p><strong>Reusability</strong>: By using <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statements, developers can write code that can be reused in different parts of the program. This reduces the amount of code that needs to be written and maintained, making the development process more efficient.</p>
+<p><strong>Debugging</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement can help simplify the debugging process by making it easier to trace problems in the code. By clearly indicating when a particular block of code should be executed, it becomes easier to determine why a particular piece of code is not working as expected.</p>
+<p><strong>Flexibility</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.</p>
+<p><strong>Example 4</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if condition1 is true then the blocks will be executed. </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if the condition1 is false, but condition2 is true then the blocks for block 2 will be executed. </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if both condition1 and condition2 are false, the else statement will be executed</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are a child.&quot;</span><span class="p">);}</span>
+<span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">19</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are a teenager.&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are an adult.&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Note</strong> <em>The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
+that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
+like indentation, spacing is used to improve readability.</em></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example 1</span>
+<span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);}</span>
+
+<span class="c1">// Example 2</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);}</span>
+
+<span class="c1">//Example 3</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">parseint</span></code> method is used to get the primitive data type of a certain String.</p>
+<p>Following are all the variants of the <code class="docutils literal notranslate"><span class="pre">parseint</span></code> method:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">int</span> <span class="pre">parseInt(String</span> <span class="pre">s)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">int</span> <span class="pre">parseInt(String</span> <span class="pre">s,</span> <span class="pre">int</span> <span class="pre">radix)</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">parseint</span></code> parameter details:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> − This is a string representation of a decimal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radix</span></code> − This would be used to convert a String s into an integer.</p></li>
+</ul>
+<p>Return Value:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">parseInt(String</span> <span class="pre">s)</span></code> − This returns an integer (decimal only).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parseInt(int</span> <span class="pre">i)</span></code> − This returns an integer, given a string representation of decimal, binary, octal, or hexadecimal (radix equals 10, 2, 8, or 16 respectively) numbers as input.</p>
+<p><strong>Note College Board Exclusion:</strong> You will not be required to use the <code class="docutils literal notranslate"><span class="pre">parseInt</span></code> or <code class="docutils literal notranslate"><span class="pre">parseDouble</span></code> methods on the AP exam.</p>
+</li>
+</ul>
+<p>Look at the code below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GuessChecker</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Add any variables you will need throughout the program here. */</span>
+<span class="w">  </span>
+<span class="w">    </span><span class="c1">// Generate the random number</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeCode</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//System.out.println(targetStr);  // uncomment for debugging</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Break the random number into four variables.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Get the user&#39;s guess.</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">guess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGuess</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//System.out.println(guess);   // uncomment for debugging</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Break the user&#39;s guess into four variables.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
+
+<span class="w">    </span><span class="cm">/*your code here*/</span>
+<span class="w">   </span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">// Checks to ensure no duplicate digits in a int.</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasDupes</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span><span class="w"> </span>
+<span class="w">		</span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">digs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="p">)</span>
+<span class="w">			  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">			</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">			</span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Creates a new random 4 digit code 1000-9999 with no duplicates.</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeCode</span><span class="p">()</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="w">		  </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">targetStr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Prompts the user for a guess and repeats until valid guess is made.</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGuess</span><span class="p">()</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">validGuess</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Guess a 4-digit number from 1000 to 9999 with no duplicate digits: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">userGuess</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">userGuess</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)))</span><span class="w"> </span>
+<span class="w">        </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userStr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method Summary</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">getGuess()</span></code></p></td>
+<td><p>Prompts the user for a four-digit guess</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">makeCode()</span></code></p></td>
+<td><p>Creates the random code that will try to be guessed</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">hasDupes(int</span> <span class="pre">sum)</span></code></p></td>
+<td><p>Used by <code class="docutils literal notranslate"><span class="pre">getGuess()</span></code> and `makeCode() to ensure that no digits are duplicated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="activity-3-2-1-guesschecker-pt-1">
+<h3>Activity 3.2.1 guessChecker Pt 1<a class="headerlink" href="#activity-3-2-1-guesschecker-pt-1" title="Link to this heading">¶</a></h3>
+<p>Modify the above code where you see <code class="docutils literal notranslate"><span class="pre">/*your</span> <span class="pre">code</span> <span class="pre">here*/</span></code> in the following ways:</p>
+<ul class="simple">
+<li><p>Use if statements to compare each digit in the user’s guess to the digit in the same position of the random number to see if they match.</p></li>
+<li><p>Implement a “hit” counter that increase by one if the user’s guessed digit matches the random number digit in the same position</p></li>
+<li><p>Display the total number of hits at the end of your program</p></li>
+<li><p>line 14: System.out.println(targetStr);  // leave this line uncommented</p></li>
+</ul>
+<p><strong>Sample output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">3768</span><span class="w"> </span><span class="c1">// random number that was generated</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7658</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">3658</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>NOTE</strong> You will be building this program and making changes to it as we navigate the unit.  You will submit 1 program at the end of <strong>Unit 3.5 Compound Boolean Expressions</strong></p>
+</section>
+<section id="activity-3-2-2">
+<h3>Activity 3.2.2<a class="headerlink" href="#activity-3-2-2" title="Link to this heading">¶</a></h3>
+<p><strong>Sevens</strong></p>
+<p>The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?</p>
+<p>What You’ll Need:</p>
+<ul class="simple">
+<li><p>2 Players</p></li>
+<li><p>6 Dice</p></li>
+</ul>
+<p><strong>How to Play</strong></p>
+<p>Agree upon how many rounds you’ll play and who will begin the game. The first player will then roll all six dice and remove any combination of numbers that add up to seven. The goal is to score the highest possible total by adding the numbers shown on the remaining dice.</p>
+<p>The first player will have the option to roll up to three times during their turn. Once they have removed any sets of dice that add up to seven (this can include one or more sets), those dice are set aside and not used again for their turn. Add the numbers on the remaining dice to calculate the score. If the player is not happy with their score, they may roll again. However, any combination of dice that total seven must be removed. They may then choose to accept their score or take the risk of rolling again to increase points. Keep in mind that the second player may only throw as many times as the first player. For example, if the first player only rolled twice, then the second player can not roll more than two times.</p>
+<p>The game ends once all the rounds have been completed, and the player with the highest score will be the winner!</p>
+<p><strong>Instructions</strong>
+Write a program that includes the following:</p>
+<ul class="simple">
+<li><p>variables for player 1 and player 2</p></li>
+<li><p>input from the user to include a user defined number of <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code> (not to exceed 10 rounds)</p></li>
+<li><p>roll six dice and have the user be able to remove all but 1 die</p></li>
+<li><p>add re-rolls where the first player determines the # of rolls the second player can roll (max 3 re-rolls)</p></li>
+<li><p>total remaining dice and add them to player 1 or player 2, respectively</p></li>
+<li><p>declare a winner after <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="if-else-statements">
+<h2>3.3 If/ Else Statements<a class="headerlink" href="#if-else-statements" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Learn the if/else statement.</p></li>
+<li><p>Simplify a complex program with if/else statements.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">92</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You have an A in the class.&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">   </span><span class="k">else</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You do not have an A in the class&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Take a look at the code below…</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span><span class="p">;</span>
+
+<span class="w">	</span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are eligible to donate blood.&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">else</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are not eligible to donate blood.&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">else</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age must be greater than 18.&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-3-3-1">
+<h3>Activity 3.3.1<a class="headerlink" href="#activity-3-3-1" title="Link to this heading">¶</a></h3>
+<p><strong>Starter Code:</strong>  <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt">starterFile_Shipping.txt</a></p>
+<p><strong>Directions:</strong>
+<em>Shipping</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask user for the weight of package, method of shipping, and coupon code</p></li>
+<li><p><strong>Weight</strong></p></li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is between 0 and 1, shippingCost is $1.</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is between 1 and 5,
+shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is over 5, shippingCost is $10.25 and add 3 days to shippingDays.</p></li>
+</ul>
+</li>
+<li><p><strong>Method of Shipping</strong></p></li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Standard” adds 3 days to shippingDays</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Express” subtracts 3 days from shippingDays and add $10 to shippingCosts</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Overnight” sets shippingDays to be 1 and add $20 to shippingCosts</p></li>
+</ul>
+</li>
+<li><p><strong>CouponCode</strong> If the user had the correct coupon code, subtract $10 from the shippingCost</p></li>
+</ul>
+<p><strong>Sample Outputs:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mf">0.5</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Standard</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
+<span class="n">none</span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$1</span><span class="mf">.0</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mi">10</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Express</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
+<span class="n">none</span><span class="w">    </span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mf">7.5</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Overnight</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
+<span class="n">COUPON17</span><span class="w"> </span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-3-3-2">
+<h3>Activity 3.3.2<a class="headerlink" href="#activity-3-3-2" title="Link to this heading">¶</a></h3>
+<p>The Bill class can help you calculate a tip depending on the number of people who have dinner with you.</p>
+<p>Complete addTip() method so it work like this:</p>
+<ul class="simple">
+<li><p>there are 8 or more people the tip is automatically 25%</p></li>
+<li><p>If there are 4 or more people (but less than 8) the tip is automatically 20%</p></li>
+<li><p>If there are 2 or more people (but less than 4) the tip is automatically 15%</p></li>
+<li><p>Otherwise, let the user decide on the percentage of the tip.</p></li>
+</ul>
+<p>Use Main.java to test class method. Make sure to test for all possible outcomes.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bill</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="c1">//attributes</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">costOfMeal</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalCustomers</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Bill</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBill</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numCustomers</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="n">costOfMeal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalBill</span><span class="p">;</span>
+<span class="w">		</span><span class="n">totalCustomers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numCustomers</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">// Add a tip based on the number of guests</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addTip</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Your code here */</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Round the bill to two decimal places</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">roundedBill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">costOfMeal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;The total cost of the bill with tip for &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalCustomers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; customers comes to $&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">roundedBill</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// starter code</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">guests</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number of guests: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">guests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Cost of meal: $&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Bill</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bill</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span><span class="w"> </span><span class="n">guests</span><span class="p">);</span>
+<span class="w">    </span><span class="n">check</span><span class="p">.</span><span class="na">addTip</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="else-if-statements">
+<h2>3.4 Else If Statements<a class="headerlink" href="#else-if-statements" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Learn multiple selections with the if/else-if conditional.</p></li>
+<li><p>Continue to improve the code of a complex program.</p></li>
+</ul>
+<p>A <em>multi-way selection</em> is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// body of the first &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statement to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 1 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// if condition 2 is true</span>
+<span class="w">    </span><span class="c1">// body of second &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 2 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// if condition 3 is true</span>
+<span class="w">    </span><span class="c1">// body of third &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="c1">// if condition 3 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// body of the &#39;else&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-3-4-1-guesschecker-pt-2">
+<h3>Activity 3.4.1 guessChecker Pt 2<a class="headerlink" href="#activity-3-4-1-guesschecker-pt-2" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong> Modify your program to include “near hits.” These are correctly guessed numbers that are in the wrong position.</p>
+<ul class="simple">
+<li><p>Report actual <code class="docutils literal notranslate"><span class="pre">hits</span></code> at the end of the program</p></li>
+<li><p>Report the <code class="docutils literal notranslate"><span class="pre">near</span> <span class="pre">hit</span></code> counter at the end of your program</p></li>
+<li><p>Use if/else-if/else statements</p></li>
+</ul>
+<p>Comment where you made the changes include the date. No submission.</p>
+</section>
+<section id="activity-3-4-2">
+<h3>Activity 3.4.2<a class="headerlink" href="#activity-3-4-2" title="Link to this heading">¶</a></h3>
+<p><strong>Instructions activityDirector:</strong>
+Write a program that will do the following:</p>
+<ul class="simple">
+<li><p>choose a random number for the temperature from 10 - 101</p></li>
+<li><p>if the temperature is greater than 95 or less than 20, print “Visit our shops!”</p></li>
+<li><p>As the Activities Director, it is your job to suggest appropriate activities to your guests based on the weather.  Write conditional <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> statements that meet the following requirements:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  temp &gt;= 80:           Go swimming!
+  60 &lt;= temp &lt; 80:      Play tennis!
+  40 &lt;  temp &lt; 60:      Play golf!
+  temp &lt;= 40:           Go skiing!
+</pre></div>
+</div>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Temperature</span><span class="p">:</span>
+<span class="mi">72</span>
+<span class="n">Play</span><span class="w"> </span><span class="n">Tennis</span><span class="o">!</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Temperature</span><span class="p">:</span>
+<span class="mi">100</span>
+<span class="n">Go</span><span class="w"> </span><span class="n">Swimming</span><span class="o">!</span>
+<span class="n">Visit</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">shops</span><span class="o">!</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Temperature</span><span class="p">:</span>
+<span class="mi">35</span>
+<span class="n">Go</span><span class="w"> </span><span class="n">skiing</span><span class="o">!</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="switch-statements-oracle">
+<h2>3.4.1 Switch Statements - Oracle<a class="headerlink" href="#switch-statements-oracle" title="Link to this heading">¶</a></h2>
+<p>The switch statement is designed to be simple and fast and is not time-consuming.</p>
+<ul class="simple">
+<li><p>A case label can be literals: <code class="docutils literal notranslate"><span class="pre">characters</span></code>, <code class="docutils literal notranslate"><span class="pre">integers</span></code>, or <code class="docutils literal notranslate"><span class="pre">strings</span></code>.</p></li>
+<li><p>A case label can include mathematical operations whose result is an <code class="docutils literal notranslate"><span class="pre">int</span></code> (not a <code class="docutils literal notranslate"><span class="pre">double</span></code>).</p></li>
+<li><p>A case label can include a method invocation whose result is an <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">char</span></code>, or <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p></li>
+<li><p>A case label does not allow comparison operators, logical operators, or object references other than Strings.</p></li>
+</ul>
+<p>Inside the main method, we prompt the user to enter a number representing a day of the week (1-7).  We use a switch statement to evaluate the value of the <code class="docutils literal notranslate"><span class="pre">day</span></code> variable.  Each <code class="docutils literal notranslate"><span class="pre">case</span></code> represents a different value of <code class="docutils literal notranslate"><span class="pre">day</span></code>. If the value matches one of the <code class="docutils literal notranslate"><span class="pre">cases</span></code>, the corresponding code block is executed.  The <code class="docutils literal notranslate"><span class="pre">break</span></code> statement is used to exit the switch statement after a <code class="docutils literal notranslate"><span class="pre">case</span></code> is matched. Without <code class="docutils literal notranslate"><span class="pre">break</span></code>, the code would continue to execute the code for subsequent cases until it reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement.  If the value of day doesn’t match any of the <code class="docutils literal notranslate"><span class="pre">case</span></code> values, the default <code class="docutils literal notranslate"><span class="pre">case</span></code> is executed, which sets <code class="docutils literal notranslate"><span class="pre">dayName</span></code> to “Invalid day.”  Finally, we display the result to the user, indicating the <code class="docutils literal notranslate"><span class="pre">day</span></code> of the week based on their input.  When you run this program and enter a number between 1 and 7, it will display the corresponding day of the week.  If you enter a number outside this range, it will show “Invalid day.”</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwitchDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a Scanner object to get user input</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Prompt the user for a day of the week (1-7)</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a day of the week (1-7): &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Switch statement to determine the day of the week</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">dayName</span><span class="p">;</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sunday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Monday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wednesday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Thursday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Friday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Saturday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid day&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// This is the default case if the input is not 1-7</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Display the result</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The day of the week is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dayName</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using <code class="docutils literal notranslate"><span class="pre">toLowerCase()</span></code> to make the comparison case-insensitive. This ensures that “apple” and “Apple” are treated the same.  We use a <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the <code class="docutils literal notranslate"><span class="pre">break</span></code> statement is used to exit the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement after a <code class="docutils literal notranslate"><span class="pre">case</span></code> is matched.  If the fruit doesn’t match any of the case values, the default case is executed, setting the category to “Unknown.”  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show “Unknown.”</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a Scanner object to get user input</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">myfruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Prompt the user for a fruit name</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a fruit name: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myfruit</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Convert the input to lowercase to make the comparison case-insensitive</span>
+<span class="w">        </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruit</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Switch statement to determine the fruit category</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">category</span><span class="p">;</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;cherry&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tropical fruit&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;grape&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;blueberry&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;strawberry&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Berry&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;lemon&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;lime&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Citrus fruit&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Display the result</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">category</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Unknown&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">category</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sorry, I don&#39;t know the category of &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-3-4-1-1">
+<h3>Activity 3.4.1.1<a class="headerlink" href="#activity-3-4-1-1" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong>  Write a switch that determines if some number num is odd or even. Test with positive and negative values.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> 	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> 	  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w"> 	  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number:&quot;</span><span class="p">);</span>
+<span class="w"> 	  </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w"> 	  </span>
+<span class="w"> 	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="compound-boolean-expressions">
+<h2>3.5 Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Understand how to evaluate a Boolean expression with multiple parts.</p></li>
+<li><p>Use truth tables to simplify expressions.</p></li>
+<li><p>Continue to improve the GuessChecker program.</p></li>
+</ul>
+<section id="activity-3-5-1">
+<h3>Activity 3.5.1<a class="headerlink" href="#activity-3-5-1" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong> Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit your replit link on Canvas.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">15</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">32</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">56</span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span>
+<span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-3-5-2">
+<h3>Activity 3.5.2<a class="headerlink" href="#activity-3-5-2" title="Link to this heading">¶</a></h3>
+<p><strong>Instructions</strong>
+Write a program that will use more than just &lt;, &gt; or =. Imagine a grandmother must approve you to date her grandchild. You can date her grandchild if you meet the following requirements:</p>
+<ul class="simple">
+<li><p>age bewteen 25 and 45</p></li>
+<li><p>gainfully employed or very attractive.</p></li>
+</ul>
+<p>Variables:
+int age
+int income = 76000;
+double cuteScale = 8.5;
+boolean date = false;</p>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">How</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">you</span><span class="o">?</span><span class="w"> </span><span class="mi">40</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">make</span><span class="o">?</span><span class="w">  </span><span class="mi">49000</span>
+<span class="n">On</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="n">how</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">rate</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">looks</span><span class="o">?</span><span class="w"> </span><span class="mi">8</span>
+<span class="n">You</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">allowed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">grandchild</span><span class="o">!</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-3-5-3-guesschecker-pt-3">
+<h3>Activity 3.5.3 guessChecker Pt 3<a class="headerlink" href="#activity-3-5-3-guesschecker-pt-3" title="Link to this heading">¶</a></h3>
+<p>This assignment will be categorized as a <strong>Project</strong>.</p>
+<p><strong>Directions:</strong> Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program with comments via replit.  Please share your link on Canvas.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">9782</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9728</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
+
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7928</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
+
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9782</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="equivalent-boolean-expressions">
+<h2>3.6 Equivalent Boolean Expressions<a class="headerlink" href="#equivalent-boolean-expressions" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Understand De Morgan’s Laws.</p></li>
+<li><p>Students will work independently, but are encouraged to ask each other for help as needed.</p></li>
+<li><p>Convert complex Boolean statements to conditional statements in code.</p></li>
+</ul>
+<p><strong>De Morgan’s law</strong> was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation
+of conditional expressions, like the expressions !(a &gt; b) that you saw in the last activity.  This particular negation may seem simple,
+but conditional expressions can become complex when joined by multiple logical operators, for example, !((x &lt; 3) || (y &gt; 2)). De Morgan
+created simple laws, or rules, to help handle these types of complex conditional expressions.</p>
+<p>Specifically, De Morgan’s laws are:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>not (a and b) is the same as (not a) or (not b)
+not (a or b) is the same as (not a) and (not b)
+
+To better understand these laws, you can use the distributive property of mathematics:
+
+Law 1: not (a and b) is the same as (not a) or (not b)
+Starting with not (a and b), distribute the not and switch the logical operator to get (not a) or (not b). 
+In Java, this can be written as:
+
+ !(a &amp;&amp; b) == (!a || !b)
+Law 2: not (a or b) is the same as (not a) and (not b)
+Again, distribute the not and switch the logical operator to get (not a) and (not b) . In Java:
+ !(a || b) == (!a &amp;&amp; !b)
+</pre></div>
+</div>
+<p>To apply De Morgan’s laws, distribute the not using the distributive property of mathematics and switch the logical operator (from and to or or from or to and).</p>
+<p>De Morgan’s laws can also be applied to conditional operators. When negating conditional operators (such as &lt;, &gt;, &gt;=), they become the opposite of what they are.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Conditional Operator</p></th>
+<th class="head text-center"><p>De Morgan’s Law</p></th>
+<th class="head text-center"><p>De Morgan’s Law Applied</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>&lt;</p></td>
+<td class="text-center"><p>not &lt;</p></td>
+<td class="text-center"><p>&gt;=</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>&gt;</p></td>
+<td class="text-center"><p>not &gt;</p></td>
+<td class="text-center"><p>&lt;=</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>==</p></td>
+<td class="text-center"><p>not ==</p></td>
+<td class="text-center"><p>!=</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>&lt;=</p></td>
+<td class="text-center"><p>not &lt;=</p></td>
+<td class="text-center"><p>&gt;</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>&gt;=</p></td>
+<td class="text-center"><p>not &gt;=</p></td>
+<td class="text-center"><p>&lt;</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>!=</p></td>
+<td class="text-center"><p>not not equal</p></td>
+<td class="text-center"><p>==</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="activity-3-6-1">
+<h3>Activity 3.6.1<a class="headerlink" href="#activity-3-6-1" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9941153/DeMorgan___Starter_Files.zip">DeMorgan___Starter_Files.zip</a></p>
+<p><strong>Instructions:</strong></p>
+<ol class="arabic simple">
+<li><p>In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).</p></li>
+</ol>
+<ul class="simple">
+<li><p>Use two if/else statements, one for each expression.</p></li>
+<li><p>Show output to confirm the results.</p></li>
+<li><p>Test for all possible values of a and b (true | true, true | false, false | true, false | false).</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Continuing in DeMorgansLaw, add the code to validate the second part of De Morgan’s Laws: not (a or b) is the same as (not a) and (not b).</p></li>
+</ol>
+<ul class="simple">
+<li><p>Use two if/else statements, one for each expression.</p></li>
+<li><p>Show output to confirm the results.</p></li>
+<li><p>Test for all possible values of a and b (true | true, true | false, false | true, false | false).</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">true</span><span class="err">&#39;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">false</span><span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">A</span>
+<span class="w"> </span><span class="kc">true</span>
+<span class="n">Enter</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">true</span><span class="err">&#39;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">false</span><span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">B</span>
+<span class="w"> </span><span class="kc">false</span>
+<span class="nf">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span>
+<span class="n">NOT</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span>
+<span class="o">-------------------------------------</span>
+<span class="n">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span>
+<span class="n">NOT</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a &amp;&amp; b) and one to reproduce !(a || b).</p></li>
+</ol>
+<ul class="simple">
+<li><p>Create truth tables if you find it helpful.</p></li>
+<li><p>Test for all possible values of a and b (true | true, true | false, false | true, false | false).</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">true</span><span class="err">&#39;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">false</span><span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">A</span>
+<span class="w"> </span><span class="kc">true</span>
+<span class="n">Enter</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">true</span><span class="err">&#39;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="err">&#39;</span><span class="kc">false</span><span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">B</span>
+<span class="w"> </span><span class="kc">false</span>
+<span class="nf">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span>
+<span class="nf">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span>
+<span class="o">-------------------------------------</span>
+<span class="n">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span>
+<span class="nf">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">evaluates</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Comment where short-circuited evaluation could occur and describe how it could occur.</p></li>
+<li><p>Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//program with a negative input</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span>
+<span class="w"> </span><span class="o">-</span><span class="mi">5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span>
+<span class="w"> </span><span class="mi">19</span>
+<span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span>
+
+<span class="c1">//program with positive inputs</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span>
+<span class="w"> </span><span class="mi">5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span>
+<span class="w"> </span><span class="mi">15</span>
+<span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span>
+</pre></div>
+</div>
+<p>Submit your assignment as a replit on Canvas.</p>
+</section>
+<section id="activity-3-6-2">
+<h3>Activity 3.6.2<a class="headerlink" href="#activity-3-6-2" title="Link to this heading">¶</a></h3>
+<p><strong>Body Mass Index (BMI)</strong></p>
+<p><strong>Instructions</strong>
+Body Mass Index (BMI) is a person’s weight measured in kilograms or pounds divided by the square of height in meters or feet. A high BMI can indicate high body fat. BMI screens for weight categories that may lead to health problems, but it does not diagnose the health of an individual.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>BMI</p></th>
+<th class="head"><p>Weight Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt; 18.5</p></td>
+<td><p>underweight</p></td>
+</tr>
+<tr class="row-odd"><td><p>18.5 - 25</p></td>
+<td><p>normal</p></td>
+</tr>
+<tr class="row-even"><td><p>25.0 - 30</p></td>
+<td><p>overweight</p></td>
+</tr>
+<tr class="row-odd"><td><p>30.0 &gt;</p></td>
+<td><p>obese</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The formula for body mass index (BMI):</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Measurement Units</p></th>
+<th class="head"><p>Formula</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Kilograms and meters (or centimeters)</p></td>
+<td><p>BMI = weight(kg)/ height(m)<sup>2</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>If height has been measured in centimeters, divide by 100 to convert this to meters.</p></td>
+</tr>
+<tr class="row-even"><td><p>Pounds and inches</p></td>
+<td><p>BMI = (weight(lbs)/height(in)<sup>2</sup>) * 703</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em><a class="reference external" href="https://www.cdc.gov/healthyweight/assessing/bmi/childrens_BMI/childrens_BMI_formula.html">cdc.gov/healthyweight</a></em></p>
+<p>Your program must include two methods:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">bmi</span></code> method must take two double parameters <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code> and returns the <code class="docutils literal notranslate"><span class="pre">bmi</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">weightClass</span></code>method must take two double parameters <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code> and returns a string classifying the weight class.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">weightClass</span></code> method must call the <code class="docutils literal notranslate"><span class="pre">bmi</span></code> method.</p></li>
+<li><p>Reminder: Use the Scanner class for input.</p></li>
+<li><p><strong>Extra credit</strong>:  allow the user to calculate in either Metric or Imperial standards.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Would</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">ocalculate</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="nf">metric</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">imperial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">standard</span><span class="o">?</span>
+<span class="n">i</span>
+
+<span class="nf">Height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">inches</span><span class="p">):</span><span class="w"> </span><span class="mf">70.0</span>
+<span class="n">Weight</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">pounds</span><span class="p">):</span><span class="w"> </span><span class="mf">194.25</span>
+<span class="n">BMI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">27.868928571428572</span>
+<span class="n">You</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="n">overweight</span><span class="p">.</span>
+</pre></div>
+</div>
+<p><span style="color:green"></span></p>
+</section>
+</section>
+<section id="comparing-objects">
+<h2>3.7 Comparing Objects<a class="headerlink" href="#comparing-objects" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Learn how to compare instances of classes to one another</p></li>
+<li><p>Create your own <code class="docutils literal notranslate"><span class="pre">equals</span></code> method for a class</p></li>
+<li><p>Practice <code class="docutils literal notranslate"><span class="pre">if</span></code> statements and coding skills</p></li>
+</ul>
+<p><mark >You may recall that the String class is included in the Java language package</mark> <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html">(See java.lang)</a>.  When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">null;</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code></p>
+<p>Note that the value of the first reference variable s1 is null. It was not assigned an actual String object like s2 was. This reference variable, and in fact any reference variable, can be compared with null, using == or != to determine if the variable actually references an object.</p>
+<p><strong>Note:</strong> You do not need to use the <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">string</span></code> constructor to create a string.  Instead you can use <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;HELLO&quot;</span></code>.  The <code class="docutils literal notranslate"><span class="pre">String</span></code> constructor is used to demonstrate object equality.</p>
+<p><strong>IMPORTANT: Object Equality</strong></p>
+<p>In addition to comparing an object to <code class="docutils literal notranslate"><span class="pre">null</span></code>, the == operator can be used to test if two variables reference the same object. For example, consider the following code:</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">s1;</span></code></p>
+<p>If you were to compare <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">==</span> <span class="pre">s2</span></code>, the result would be <code class="docutils literal notranslate"><span class="pre">true</span></code>. Both objects refer to the same storage location in memory. Compare the above code to the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code></p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code> contain the same string, but they are different objects in memory, so the comparison of <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">==</span> <span class="pre">s2</span> <span class="pre">is</span> <span class="pre">false</span></code>. They are not the same object; they just happen to contain the same value. When comparing objects, <code class="docutils literal notranslate"><span class="pre">==</span></code> is used to compare object references (memory locations.) To compare the values of two objects, you must use a new method called <code class="docutils literal notranslate"><span class="pre">equals</span></code>.  Using <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code> as an example, the syntax of the equals method is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">s1.equals(s2);</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">equals</span></code> method is a Boolean method that returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the contents of <code class="docutils literal notranslate"><span class="pre">s1</span></code> is equal to the contents of <code class="docutils literal notranslate"><span class="pre">s2</span></code>; otherwise, it returns <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p><strong>Notes:</strong> The == operator is used to compare object references, and the equals method is used to compare object contents. In other words, == checks if both objects point to the same memory location, whereas the equals method compares the values in the objects.</p>
+<p><strong>Aliasing</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ShapeEquals</span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span>
+<span class="mi">3</span><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="mi">4</span><span class="w">  </span><span class="p">{</span>
+<span class="mi">5</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span>
+<span class="mi">6</span><span class="w">    </span><span class="n">shape1</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Triangle&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="mi">7</span><span class="w">  </span>
+<span class="mi">8</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span>
+<span class="mi">9</span><span class="w">    </span><span class="n">shape2</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Square&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="mi">10</span><span class="w">  </span>
+<span class="mi">11</span><span class="w">   </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape1</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;---</span>
+<span class="mi">12</span><span class="w">    </span><span class="n">shape3</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Hexagon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;---</span>
+<span class="mi">13</span><span class="w">    </span>
+<span class="mi">14</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">shape1</span><span class="p">.</span><span class="na">getShape</span><span class="p">());</span>
+<span class="mi">15</span><span class="w">  </span><span class="p">}</span>
+<span class="mi">16</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Take a look at the program above.  Looking at the program, you may have thought that the output of “shape1” would display “Triangle”.  Look carefully at lines 11 and 12. When <code class="docutils literal notranslate"><span class="pre">shape3</span></code> is set to <code class="docutils literal notranslate"><span class="pre">shape1</span></code>, <code class="docutils literal notranslate"><span class="pre">shape3</span></code> points to the same address in memory as <code class="docutils literal notranslate"><span class="pre">shape1</span></code>. Any changes to <code class="docutils literal notranslate"><span class="pre">shape1</span></code> or <code class="docutils literal notranslate"><span class="pre">shape3</span></code> will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.</p>
+<p><strong>Note:</strong> Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases.</p>
+<section id="activity-3-7-1">
+<h3>Activity 3.7.1<a class="headerlink" href="#activity-3-7-1" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip">137Clue.zip</a></p>
+<p><strong>Directions</strong>  Review the current program as it is currently written. Look at “what works” and “what needs work”. Make the necessary changes to the program so it produces the intended outcome (see sample below).</p>
+<p>This program simulates Clue.</p>
+<p>Here is what works:</p>
+<ul class="simple">
+<li><p>the program randomly generates a final murderer, weapon, and room</p></li>
+<li><p>prints out choices for the user</p></li>
+<li><p>asks user for final guess</p></li>
+</ul>
+<p>Here is what needs work:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>we want to see if our guess is the same as the solution, but something is off with equals()
+check() should only get called if our guess isn&#39;t 100% correct
+
+   - The table of the Suspect, Weapon and Room are not aligned.  Use \t to organize each column.
+   - Should print &quot;You have the correct muderer.&quot; if we have the correct muderer.
+   - Should print &quot;You have the correct weapon.&quot; if we have the correct weapon.
+   - Should print &quot;You have the correct room.&quot; if we have the correct room.
+</pre></div>
+</div>
+<p>Extra:</p>
+<ul class="simple">
+<li><p>Ignore case, use .equalsIgnoreCase()</p></li>
+<li><p>Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room</p></li>
+</ul>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Clue</span><span class="o">!</span><span class="w"> </span><span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">category</span><span class="p">.</span>
+
+<span class="n">Suspect</span><span class="w">     	</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   </span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span>
+<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   	</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span>
+<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span>
+<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  </span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    </span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  	</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span>
+<span class="w">                		</span><span class="n">Hall</span>
+<span class="w">                		</span><span class="n">Lounge</span>
+<span class="w">                		</span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span>
+
+<span class="n">Make</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">accusation</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">key</span><span class="p">:</span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span>
+<span class="n">Knife</span>
+<span class="n">Kitchen</span>
+
+<span class="n">Congratulations</span><span class="o">!</span>
+<span class="n">It</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Knife</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kitchen</span>
+</pre></div>
+</div>
+<details><summary>New Java keyWord: switch</summary>
+<p>For the purposes of this program, you can use the jave keyword <code class="docutils literal notranslate"><span class="pre">switch</span></code>.  I discourage you from using it for the AP exam as it is not a part of the AP exam.<br />
+Instead of writing many <code class="docutils literal notranslate"><span class="pre">if..else</span></code> statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">x</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// your code</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">y</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// your code</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="p">:</span>
+<span class="w">    </span><span class="c1">// your code</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is how it works:</p>
+<ul class="simple">
+<li><p>The switch expression is evaluated once.</p></li>
+<li><p>The value of the expression is compared with the values of each case.</p></li>
+<li><p>If there is a match, the associated block of code is executed.</p></li>
+<li><p>The break and default keywords are optional.</p>
+<ul>
+<li><p>When Java reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword, it breaks out of the switch block.</p></li>
+<li><p>The default keyword specifies some code to run if there is no case match.</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tuesday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wednesday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Thursday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Friday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saturday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sunday&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">    	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I don&#39;t even know what day it is!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Outputs &quot;Thursday&quot; (day 4)</span>
+</pre></div>
+</div>
+</details>
+</section>
+</section>
+<section id="project">
+<h2>3.8 Project<a class="headerlink" href="#project" title="Link to this heading">¶</a></h2>
+<p><strong>Choose Your Own Adventure</strong></p>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.</p></li>
+<li><p>Apply the development process to create a project.</p></li>
+<li><p>Each student will create their own project</p></li>
+</ul>
+<p>In this project, you will create a “Choose Your Own Adventure” game or story. You will ask the user for several inputs
+and use conditionals to display different choices and results. You will first plan out the path and the flow of your program on paper.</p>
+<p><strong>Requirements of this project</strong></p>
+<p>Your program should present the user with several choices. Each of those choices will branch into other choices.
+This can be done by setting Boolean variables or executing different sections of code based on the user’s input.</p>
+<p>Looking back at previous programs and the requirements stated above, you know you will need:</p>
+<ul class="simple">
+<li><p>At least three Boolean expressions that change the path in the program</p></li>
+<li><p>Print statements, depending on current and previous choices.</p></li>
+<li><p>At least three nested if/else-if/else clauses</p></li>
+</ul>
+<p><strong>You Must Include</strong></p>
+<ul class="simple">
+<li><p>Flowchart of your program</p>
+<ul>
+<li><p>Must be digital</p></li>
+<li><p>Must use appropriate shapes and lines</p></li>
+</ul>
+</li>
+<li><p>Develop a timeline chart of when you plan to start and complete a specific task within your project</p>
+<ul>
+<li><p>Must be digital</p></li>
+<li><p>Must be posted and shared</p></li>
+</ul>
+</li>
+<li><p>If you modify the program, add new additions within your timeline</p></li>
+</ul>
+<p><strong>Deliverables</strong>
+Document and collect the following items:</p>
+<ul class="simple">
+<li><p>Development process of your program</p>
+<ul>
+<li><p>documented brainstorming ideas</p></li>
+<li><p>flowchart</p></li>
+<li><p>timeline chart</p></li>
+<li><p>Quality screenshots of your program’s output</p>
+<ul>
+<li><p>To convey your program’s functionality</p></li>
+<li><p>Use more than one screenshot and explain what each one illustrates</p></li>
+</ul>
+</li>
+<li><p>A description of two code segments related to the program requirements</p>
+<ul>
+<li><p>Be sure your description identifies the name of the variables being processed</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Your completed code submitted as a replit</p></li>
+<li><p>Your documentation submitted digitally as one document</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../Chapter_2/Unit4.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Unit 4</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="Unit2.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Unit 2 - Using Objects</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Mr. V
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Unit 3</a><ul>
+<li><a class="reference internal" href="#logical-operators">Logical Operators</a></li>
+<li><a class="reference internal" href="#boolean-expressions">3.1 Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-3-1-1">Activity 3.1.1</a></li>
+<li><a class="reference internal" href="#activity-3-1-2">Activity 3.1.2</a></li>
+<li><a class="reference internal" href="#activity-3-1-3">Activity 3.1.3</a></li>
+<li><a class="reference internal" href="#activity-3-1-4">Activity 3.1.4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if-statements-and-control-flow">3.2 If Statements and Control Flow</a><ul>
+<li><a class="reference internal" href="#activity-3-2-1-guesschecker-pt-1">Activity 3.2.1 guessChecker Pt 1</a></li>
+<li><a class="reference internal" href="#activity-3-2-2">Activity 3.2.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if-else-statements">3.3 If/ Else Statements</a><ul>
+<li><a class="reference internal" href="#activity-3-3-1">Activity 3.3.1</a></li>
+<li><a class="reference internal" href="#activity-3-3-2">Activity 3.3.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#else-if-statements">3.4 Else If Statements</a><ul>
+<li><a class="reference internal" href="#activity-3-4-1-guesschecker-pt-2">Activity 3.4.1 guessChecker Pt 2</a></li>
+<li><a class="reference internal" href="#activity-3-4-2">Activity 3.4.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#switch-statements-oracle">3.4.1 Switch Statements - Oracle</a><ul>
+<li><a class="reference internal" href="#activity-3-4-1-1">Activity 3.4.1.1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compound-boolean-expressions">3.5 Compound Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-3-5-1">Activity 3.5.1</a></li>
+<li><a class="reference internal" href="#activity-3-5-2">Activity 3.5.2</a></li>
+<li><a class="reference internal" href="#activity-3-5-3-guesschecker-pt-3">Activity 3.5.3 guessChecker Pt 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#equivalent-boolean-expressions">3.6 Equivalent Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-3-6-1">Activity 3.6.1</a></li>
+<li><a class="reference internal" href="#activity-3-6-2">Activity 3.6.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparing-objects">3.7 Comparing Objects</a><ul>
+<li><a class="reference internal" href="#activity-3-7-1">Activity 3.7.1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project">3.8 Project</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>

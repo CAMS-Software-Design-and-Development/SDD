@@ -1,0 +1,2566 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Resources" href="Resources/Resources.html" /><link rel="prev" title="Welcome to CSA JAVA!" href="index.html" />
+
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
+        <title>AP Computer Science A Course Overview - CSA JAVA Course</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">CSA JAVA Course</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">CSA JAVA Course</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resources/Resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resources/AP_Resources.html">AP Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_1/Unit1.html">Unit 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_1/Unit2.html">Unit 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_1/Unit3.html">Unit 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_2/Unit4.html">Unit 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_2/Unit5.html">Unit 5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_3/Unit6.html">Unit 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_3/Unit7.html">Unit 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_3/Unit8.html">Unit 8</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_4/Unit9.html">Unit 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_4/Unit10.html">Unit 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_4/Final_Project.html">Final Project</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/home.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <p align="center">*** This course is designed to prepare students to take the <b>AP Computer Science A </b>Exam *** </br>
+*** Excerpts from the course overview was taken from AP CollegeBoard ***</p> 
+<section id="ap-computer-science-a-course-overview">
+<h1>AP Computer Science A Course Overview<a class="headerlink" href="#ap-computer-science-a-course-overview" title="Link to this heading">¶</a></h1>
+<p>AP Computer Science A is an introductory college-level computer science course that introduces one of the more popular programming languages to students. Fundamental topics in this course include the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems. The course emphasizes object-oriented programming and design using the Java programming language.</p>
+<p>The following big ideas serve as the foundation of the course, enabling students to create meaningful connections among concepts:</br>
+<b>Modularity</b>: Modularity in object-oriented programming allows us to use abstraction to break complex programs down into individual classes and methods.</br>
+<b>Variables</b>: Variables create data abstractions, as they can represent a set of possible values or a group of related values.</br>
+<b>Control</b>: Doing things in order, making decisions, and doing thesame process multiple times are represented in code by usingcontrol structures.</br>
+<b>Impact of Computing</b>: Computers and computing haverevolutionized our lives. To use computing safely and responsibly,we need to be aware of privacy, security, and ethical issues.</br></p>
+<p>For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, &amp; images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.</p>
+<section id="java-at-a-glance">
+<h2>Java at a glance<a class="headerlink" href="#java-at-a-glance" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p>
+<p>Every Java program will begin like this:</p>
+<p><img alt="Main Class and Method in java" src="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/e7f0bd1f-69b7-42da-b824-0ed8f9d0f460" /></p>
+   </p></details>
+</section>
+<section id="syllabus">
+<h2>Syllabus<a class="headerlink" href="#syllabus" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p>
+<section id="expectations">
+<h3>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Be on time for class.</mark> This includes but is not limited to having you log into your Canvas course, course website, and notebook.  Students should be seated within the first five minutes of class to avoid being marked tardy or absent</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Be prepared for class.</mark> This includes having your notebook, assignments, pen/pencil, and paper.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Have a good attitude about learning.</mark> Be prepared to actively participate in class. Accept feedback with a positive attitude.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Be respectful of others and their property.</mark></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Take care of the learning environment.</mark> Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <mark>Report any damaged equipment.</mark></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not change any of the settings on the computers.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not download/ install any programs (including games) to the computer.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not access inappropriate content on the internet.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="policy-on-academic-honesty">
+<h3>Policy on Academic Honesty<a class="headerlink" href="#policy-on-academic-honesty" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> I encourage students to work with a peer on assignments.  It can make learning fun!  YOu may help with general problem-solving strategies, ideas, and algorithms, but <strong>all solutions should be your own</strong>. In practice, this means that, while students can discuss programs and questions, <em>all lines of code should originate from your own mind</em>. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> If you use other sources for help (websites, LLM/ AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help. Please make sure you understand any code that you use from another source.  I discourage you from copying my assignments into LLM/ AI tool to generate a complete solution. You can use LLM/ AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn the goal(s) of the assignment is asking you to practice!</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Assignments that are designated as team/ group assignments must have each student’s name within the block header. Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peer’s work. Submitted assignments that has another student’s name on it and not your name will be considered as cheating and subject to the district’s policy regarding plagiarism/ cheating.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="electronic-devices">
+<h3>Electronic Devices<a class="headerlink" href="#electronic-devices" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Students should be engaged during class! From my experience, most students are using their electronic device(s) for activities not related to the class content.  Thus, during instruction, assessment, classwork, discussions or group collaboration electronic devices should be placed in a secure location where it will not be a distraction.  Specifically, students should not be accessing smart phones, tablets or any device during class without permission from the teacher. Phones should be set to silent or turned off in class.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> CAMS provides Windows <strong>Laptops</strong> for student use.  <strong>Personal Laptops are a privilege on our campus and not a right</strong>. Parent(s)/guardian(s) will be notified and conferences will be held should a student persist in using laptops for entertainment purposes.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Earphones, headphones, or other listening tools (excluding medically approved listening devices) should not be used during instruction or collaboration time.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="notes-notebook">
+<h3>Notes/ Notebook<a class="headerlink" href="#notes-notebook" title="Link to this heading">¶</a></h3>
+<p>Each student will be responsible for taking, organizing, and maintaining Unit notes  (<a class="reference external" href="https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#note-taking-in-learning">Purpose of Note-Taking</a>).  Notes should be hand-written.  The method of note-taking will be Cornell Notes.  Students will be provided with the formatted Cornell Notes document for each <a class="reference external" href="https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#units-topics">subsection of the Unit</a>.  Additional pages will be provided as needed.  Students are encouraged to keep their notebooks up-to-date and organized.</p>
+</section>
+<hr class="docutils" />
+<section id="academic-support">
+<h3>Academic Support<a class="headerlink" href="#academic-support" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Before school – 7:30 am – 8:30 am - <em>please contact me prior to the date you need assistance as I may be meeting with another student or have a meeting</em></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> After school – Tuesday – Thursday: 3:45 pm – 4:15 pm</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> the <strong>DEN</strong> Peer Tutoring (Monday - Friday/ before and after school)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="weighted-grading">
+<h3>Weighted Grading<a class="headerlink" href="#weighted-grading" title="Link to this heading">¶</a></h3>
+<p>Grades are posted online using Canvas. Grades are weighted and assigned as detailed below. Each item is scaled on a point system.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grading</p></th>
+<th class="head text-center"><p>Percentage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Projects (IDP, Final Project)</p></td>
+<td class="text-center"><p>50%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Test/ Quizzes</p></td>
+<td class="text-center"><p>30%</p></td>
+</tr>
+<tr class="row-even"><td><p>Classwork/ Portfolio</p></td>
+<td class="text-center"><p>15%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Notes (students may use the current unit hand-written notes for tests)</p></td>
+<td class="text-center"><p>5%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="grading-scale">
+<h3>Grading Scale<a class="headerlink" href="#grading-scale" title="Link to this heading">¶</a></h3>
+<p>All projects, presentations, tests, quizzes, classwork, portfolio &amp; notes will be used to calculate your final grade.</p>
+<p>Projects, classwork, portfolio, and notes grading will follow this scale:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 4 - Exceeded Expectations - The program is fully functional and the student has added functionality that exceeds the brief. (A)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 3 - Met Expectations - All program functionality is evident. (B)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 2 - Approaching Expectations - Most of the program is functional but there are still some functionality issues. (C).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 1 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 0 - Little to no work was Completed (F)</p></li>
+</ul>
+<p>Students who score below 75% on a project, test or quiz (excluding finals) may retake the project, test, or quiz for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Grade Letter</p></th>
+<th class="head text-center"><p>Percentage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>A</p></td>
+<td class="text-center"><p>90% - 100%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>B</p></td>
+<td class="text-center"><p>80% - 89%</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>C</p></td>
+<td class="text-center"><p>70% - 79%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>D</p></td>
+<td class="text-center"><p>60% - 69%</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>F</p></td>
+<td class="text-center"><p>50% - 59%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>M(issing)</p></td>
+<td class="text-center"><p>45%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="classroom-attendance-conduct-participation-grade">
+<h3>Classroom Attendance, Conduct, &amp; Participation Grade<a class="headerlink" href="#classroom-attendance-conduct-participation-grade" title="Link to this heading">¶</a></h3>
+<p>It is crucial that students consistently attend class. Most classes will consist of activities and projects where students are learning the structure and implementation of a language. Consistent attendance is important to this class and poor attendance will affect their understanding and overall performance in this class. This grade is inclusive of attendance, participation, and behavior within the classroom. The items are additive.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><strong>Tardies, Sleeping, Playing Games, </br>doing other classes’ assignments</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0-5 Excellent(<strong>E</strong>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6-10 Satisfactory(<strong>S</strong>)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11–15 Needs Improvement(<strong>N</strong>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>16+ Unsatisfactory(<strong>U</strong>)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="make-up-late-work-policy">
+<h3>Make-up &amp; Late work policy<a class="headerlink" href="#make-up-late-work-policy" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Students are responsible for makeup work when absent. Please refer to the district policy regarding make up work when students are absent.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <em>To make up a quiz or a test, it is the student’s responsibility to contact the teacher with two weeks upon their return to set an agreed upon date &amp; time.</em></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make-ups or retakes will be done either before or after school</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <u>Handouts</u> will be placed in a makeup folder with the student’s name and it is the student’s responsibility to check this folder when they return before consulting the instructor.</p></li>
+</ul>
+<hr class="docutils" />
+ </p></details>
+</section>
+</section>
+<section id="units-topics">
+<h2>Units &amp; Topics<a class="headerlink" href="#units-topics" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+<p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Units</p></th>
+<th class="head text-left"><p>Topics</p></th>
+<th class="head text-center"><p>MCQ</p></th>
+<th class="head text-center"><p>FRQ</p></th>
+<th class="head text-center"><p>Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p></p></td>
+<td class="text-left"><p><strong>Orientation &amp; Structure</strong></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 1</p></td>
+<td class="text-left"><p>1.1 Why Programming?  Why Java?</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 1</p></td>
+<td class="text-left"><p>1.2 Variables and Data Types?</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 1</p></td>
+<td class="text-left"><p>1.3 Expressions and Assignment Statements</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 1</p></td>
+<td class="text-left"><p>1.4 Compound Assignment Operators</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 1</p></td>
+<td class="text-left"><p>1.5 Casting and Ranges of Variables</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.2 if Statements and Control Flow</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.3 if-else Statements</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.4 else if Statements</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.1 Boolean Expressions</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.5 Compound Boolean Expressions</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.6 Equivalent Boolean Expressions</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 3</p></td>
+<td class="text-left"><p>3.7 Comparing Objects</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.1 Objects: Instances of Classes</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.2 Creating and Storing Objects (Instantiation)</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.3 Calling a Void Method</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.4 Calling a Void Method with Parameters</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.5 Calling a Non-Void Method</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.6 String Objects: Concatenation, Literals, and More</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.7 String Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.8 Wrapper: Classes Integer and Double</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 2</p></td>
+<td class="text-left"><p>2.9 Using the Math Class</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 4</p></td>
+<td class="text-left"><p>4.1 while Loops</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 4</p></td>
+<td class="text-left"><p>4.2 for Loops</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 4</p></td>
+<td class="text-left"><p>4.3 Developing Algorithms Using Strings</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 4</p></td>
+<td class="text-left"><p>4.4 Nested Iteration</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 4</p></td>
+<td class="text-left"><p>4.5 Informal Code Analysis</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.1 Anatomy of a Class</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.2 Constructors</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.3 Documentation with Comments</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.4 Accessor Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.5 Mutator Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.6 Writing Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.7 Static Variables and Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.8 Scope and Access</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FCQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.9 this Keyword</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 5</p></td>
+<td class="text-left"><p>5.10 Ethical and Social Implications of Computing Systems</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.1 Creating Superclasses and Subclasses</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.2 Writing Constructors for Subclasses</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.3 Overriding Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.4 super Keyword</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.5 Creating References Using Inheritance Hierarchies</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.6 Polymorphism</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 9</p></td>
+<td class="text-left"><p>9.7 Object Superclass</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 6</p></td>
+<td class="text-left"><p>6.1 Array Creation and Access</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 6</p></td>
+<td class="text-left"><p>6.2 Traversing Arrays</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 6</p></td>
+<td class="text-left"><p>6.3 Enhanced for Loop for Arrays</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>6.4 Developing Algorithms Using Arrays</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-left"><p>———————– <strong>Semester 1 Ends</strong> ———————–</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.1 Introduction to ArrayList</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.2 ArrayList Methods</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.3 Traversing ArrayLists</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.4 Developing Algorithms Using ArrayLists</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.5 Searching</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.6 Sorting</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 7</p></td>
+<td class="text-left"><p>7.7 Ethical Issues Around Data Collection</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 8</p></td>
+<td class="text-left"><p>8.1 2D Arrays</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 8</p></td>
+<td class="text-left"><p>8.2 Traversing 2D Arrays</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unit 10</p></td>
+<td class="text-left"><p>10.1 Recursion</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Unit 10</p></td>
+<td class="text-left"><p>10.2 Recursive Searching and Sorting</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>TBD</strong></p></td>
+<td class="text-left"><p>Unit Exam</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p></p></td>
+<td class="text-left"><p>White Tower Final Project</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-left"><p>Practice Exam 2014</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p></p></td>
+<td class="text-left"><p>Practice Exam 2015</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-left"><p>Practice Exam 2020</p></td>
+<td class="text-center"><p>MCQ</p></td>
+<td class="text-center"><p>FRQ</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</p></details>
+</section>
+<section id="note-taking-in-learning">
+<h2>Note-taking in learning<a class="headerlink" href="#note-taking-in-learning" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+<p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> So, you have the powerpoint, video, textbook, website and/ or whatever other resources were provided to you for this particular lesson.  <ins>Do you need to take notes as well?</ins></p></li>
+</ul>
+<p>Despite the vast amount of information available in electronic formats, taking notes is an <code style="color : red">important</code> learning strategy. In addition, the way that you take notes matters, and not all note-taking strategies lead to equal results.  By considering your note-taking strategies carefully, you will be able to create a set of notes that will help retain the most important concepts from lectures and tests, and that will assist you in your exam preparation.</p>
+<section id="two-purposes-for-taking-notes">
+<h3>Two Purposes for Taking Notes<a class="headerlink" href="#two-purposes-for-taking-notes" title="Link to this heading">¶</a></h3>
+<p>People take notes for two main reasons:</p>
+<ol class="arabic simple">
+<li><p>To keep a record of the information that was heard. This is also called the <em>external storage function</em> of note-taking.</p></li>
+<li><p>To facilitate learning that you are currently studying.</p></li>
+</ol>
+<p>The availability of information on the internet may reduce the importance of the <em>external storage function</em> of note-taking. When the information is available online, it may seem logical to stop taking notes.  However, by neglecting to take notes, <ins>you lose the benefits of note-taking as a learning tool</ins>.</p>
+</section>
+<section id="how-note-taking-supports-learning">
+<h3>How Note-Taking Supports Learning<a class="headerlink" href="#how-note-taking-supports-learning" title="Link to this heading">¶</a></h3>
+<p>Taking notes during class supports your learning in several important ways:</p>
+<ol class="arabic simple">
+<li><p>Taking notes helps you to focus your attention and avoid distractions.</p></li>
+<li><p>As you take notes in class, you will be engaging your mind in identifying and organizing the main ideas. Rather than passively listening, you will be doing the work of active learning while in class, making the most of your time.</p></li>
+<li><p>Creating good notes means that you will have a record for later review. Reviewing a set of condensed and well-organized notes is more efficient than re-reading longer texts and articles.</p></li>
+</ol>
+<p>Everybody takes notes, or at least everybody claims to. But if you take a close look, many who are claiming to take notes on their laptops are actually surfing the Web, and paper notebooks are filled with doodles interrupted by a couple of random words with an asterisk next to them reminding you that “This is important!” In college and university, these approaches will not work. Your instructors expect you to make connections between class lectures and reading assignments; they expect you to create an opinion about the material presented; they expect you to make connections between the material and life beyond school. Your notes are your road maps for these thoughts. Do you take good notes? Actively listening and note-taking are key strategies to ensure your student success.</p>
+<p>Effective note-taking is important because it:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> supports your listening efforts.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> allows you to test your understanding of the material.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> helps you remember the material better when you write key ideas down.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> gives you a sense of what the instructor thinks is important.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> creates your “ultimate study guide.”</p></li>
+</ul>
+<p>There are various forms of taking notes, and which one you choose depends on both your personal style and the instructor’s approach to the material. Each can be used in a notebook, index cards, or in a digital form on your laptop. No specific type is good for all students and all situations, so we recommend that you develop your own style, but you should also be ready to modify it to fit your needs of a specific class or instructor. To be effective, all of these methods require you to <em>listen actively</em> and to think; merely jotting down words the instructor is saying will be of little use to you.</p>
+</section>
+<section id="note-taking-methods">
+<h3>Note-taking methods<a class="headerlink" href="#note-taking-methods" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>When to Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lists</p></td>
+<td><p>A sequential listing of ideas as they are presented. Lists may be short phrases or complete paragraphs describing ideas in more detail.</p></td>
+<td><p>This method is what most students use as a fallback if they haven’t learned other methods. This method typically requires a lot of writing, and you may find that you are not keeping up with the professor. It is not easy for students to prioritize ideas in this method.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Outlines</p></td>
+<td><p>The outline method places most important ideas along the left margin, which are numbered with roman numerals. Supporting ideas to these main concepts are indented and are noted with capital letters. Under each of these ideas, further detail can be added, designated with an Arabic number, a lowercase letter, and so forth.</p></td>
+<td><p>A good method to use when material presented by the instructor is well organized. Easy to use when taking notes on your computer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Concept Maps</p></td>
+<td><p>When designing a concept map, place a central idea in the center of the page and then add lines and new circles in the page for new ideas. Use arrows and lines to connect the various ideas.	Great method to show relationships among ideas.</p></td>
+<td><p>Also good if the instructor tends to hop from one idea to another and back.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cornell Method</p></td>
+<td><p>The Cornell method uses a two-column approach. The left column takes up no more than a third of the page and is often referred to as the “cue” or “recall” column. The right column (about two-thirds of the page) is used for taking notes using any of the methods described above or a combination of them. After class or completing the reading, review your notes and write the key ideas and concepts or questions in the left column. You may also include a summary box at the bottom of the page, in which to write a summary of the class or reading in your own words.</p></td>
+<td><p>The Cornell method can include any of the methods above and provides a useful format for calling out key concepts, prioritizing ideas, and organizing review work. Most universities recommend using some form of the Cornell method.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<section id="the-cornell-method">
+<h4>The Cornell Method<a class="headerlink" href="#the-cornell-method" title="Link to this heading">¶</a></h4>
+<p><strong>Example:</strong> The Cornell Method of Note-taking</p>
+<p><img alt="Cornell_Notes_Sample" src="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/6123fb06-f099-4e9e-be37-dab810a49f6d" /></p>
+<p>The Cornell method was developed in the 1950s by Professor Walter Pauk at Cornell University. It is recommended by many universities because of its usefulness and flexibility. This method is simple to use for capturing notes, is helpful for defining priorities, and is a very helpful study tool.</p>
+<p>The Cornell method follows a very specific format that consists of four boxes: a header, two columns, and a footer.</p>
+<p>The header is a small box across the top of the page. In it you write identification information like the course name and the date of the class. Underneath the header are two columns: a narrow one on the left (no more than one-third of the page) and a wide one on the right. The wide column, called the “notes” column, takes up most of the page and is used to capture your notes using any of the methods outlined earlier. The left column, known as the “cue” or “recall” column, is used to jot down main ideas, keywords, questions, clarifications, and other notes. It should be used both during the class and when reviewing your notes after class. Finally, use the box in the footer to write a summary of the class in your own words. This will help you make sense of your notes in the future and is a valuable tool to aid with recall and studying.</p>
+<blockquote>
+<div><p>“I used to tape my lecture classes so I could fill in my sketchy notes afterwards. Now that I’m using the Cornell system, my notes are complete and organized in much less time. And my regular five-minute reviews make learning almost painless. No more taping and listening twice.”     — A student at Southern Methodist University</p>
+</div></blockquote>
+<p>All note-taking methods end with the same step: <mark>reviewing your notes as soon as possible after class.</mark> Any review of your notes is helpful (reading them, copying them onto your computer, or even recasting them using another note-taking method). <strong>But THINK!</strong> Make your review of notes a thoughtful activity, not a mindless process. When you review your notes, think about questions you still have and determine how you will get the answers. (From the next class? Studying with a friend? Looking up material in your text or on the net?) Examine how the material applies to the course; make connections with notes from other class sessions, with material in your text, and with concepts covered in class discussions. Finally, it’s fun to think about how the material in your notes applies to real life. Consider this both at the very strategic level (as in “What does this material mean to me in relation to what I want to do with my life?”) as well as at a very mundane level (as in, “Is there anything cool here I can work into a conversation with my friends?”).</p>
+</section>
+<section id="teacher-handouts">
+<h4>Teacher Handouts<a class="headerlink" href="#teacher-handouts" title="Link to this heading">¶</a></h4>
+<p>Some Teachers hand out or post their notes or their PowerPoint slides. These handouts should <u><em>never</em></u> be considered a substitute for taking notes in class. They are a very useful complement and will help you confirm the accuracy of your notes, but they do not involve you in the process of learning as well as your own notes do. After class, review your notes with highlighter in hand and mark keywords and ideas in your notes. This will help you write a summary of the class in your own words.</p>
+</section>
+</section>
+<section id="general-tips-on-note-taking">
+<h3>General Tips on Note-Taking<a class="headerlink" href="#general-tips-on-note-taking" title="Link to this heading">¶</a></h3>
+<p>Regardless of what note-taking method you use, there are some note-taking habits you should get into for all circumstances and all courses:</p>
+<ol class="arabic simple">
+<li><p><strong>Be prepared:</strong> Make sure you have the tools you need to do the job. If you are using a notebook, be sure you have it with you and that you have enough paper. Also be sure to have your pen (as well as a spare) and perhaps a pen with different-coloured ink to use for emphasis. If you are taking notes on your laptop, make sure the battery is charged! Select the application that lends itself best to your style of note-taking. Microsoft Word works very well for outline notes, but you might find taking notes in Excel to work best if you are working within the Cornell method. (It’s easier to align your thoughts in the cue or recall column to your notes in the right column. Just be sure you keep one idea per row!)</p></li>
+<li><p><strong>Write on only one side of the paper:</strong> This will allow you to integrate your reading notes with your class notes.</p></li>
+<li><p><strong>Label, number, and date all notes at the top of each page:</strong> This will help you keep organized.</p></li>
+<li><p><code style="color : white"><strong>When using a laptop, position it such that you can see the instructor and white board right over your screen:</strong> This will keep the instructor in your field of vision even if you have to glance at your screen or keyboard from time to time. Make sure your focus remains with the instructor and not on your laptop. A word of caution about laptops for note-taking: use them if you are very adept at keyboarding, but remember that not all note-taking methods work well on laptops because they do not easily allow you to draw diagrams and use special notations (scientific and math formulas, for example).</code></p></li>
+<li><p><strong>Don’t try to capture everything that is said:</strong> Listen for the big ideas and write them down. Make sure you can recognize the instructor’s emphasis cues and write down all ideas and keywords the instructor emphasizes. Listen for clues like “the four causes were…” or “to sum up.…”</p></li>
+<li><p><strong>Copy anything the instructor writes on the board:</strong> It’s likely to be important.</p></li>
+<li><p><strong>Leave space between ideas:</strong> This allows you to add additional notes later (e.g. notes on the answer to a question you or one of your classmates asked).</p></li>
+<li><p><strong>Use signals and abbreviations:</strong> The ones you use are up to you, but be consistent so you will know exactly what you mean by “att.” when you review your notes. You may find it useful to keep a key to your abbreviations in all your notebooks.</p></li>
+<li><p><strong>Use some method for identifying your own thoughts and questions to keep them separate from what the instructor or textbook author is saying:</strong> Some students use different colour ink; others box or underline their own thoughts. Do whatever works for you.</p></li>
+<li><p><strong>Create a symbol to use when you fall behind or get lost in your note-taking:</strong> Jot down the symbol, leave some space, and focus on what the instructor is covering now. Later you can ask a classmate or the professor to help you fill in what you missed, or you can find it in your textbook.</p></li>
+<li><p><strong>Review your notes as soon after class as possible (the same day is best):</strong> This is the secret to making your notes work! Use the recall column to call out the key ideas and organize facts. Fill in any gaps in your notes and clean up or redraw hastily drawn diagrams.</p></li>
+<li><p><strong>Write a summary of the main ideas of the class in your own words:</strong> This process is a great aid to recall. Be sure to include any conclusions from the lecture or discussion.</p></li>
+<li><p><strong>Use notes when preparing for a test or doing an assignment:</strong> Your notes usually have a summary of the most important points and are useful for making sure you incorporate important concepts in your assignments and for focusing on the main concepts when studying for tests and exams.</p></li>
+</ol>
+<p><strong>What If You Miss Class?</strong>
+Clearly the best way to learn class material is to be at the class and to take your own notes. Regular attendance is expected, but life happens. On occasion, you may miss a class. When this happens, here are some strategies you can use to make up for it:</p>
+<ul class="simple">
+<li><p><em>Never</em> ask: “Did I miss anything important?” (Think about what that is saying and you’ll see it’s rather insulting.)</p></li>
+<li><p>If the notes or powerpoint is posted online… take notes. If the teacher uses PowerPoint slides, request a copy (or download them if posted) and review them carefully, jotting down your own notes and questions. Review your notes with a classmate who did attend.</p></li>
+<li><p>You may want to borrow class notes from a classmate. If you do, <em>don’t just copy them and insert them in your notebook</em>. They will not be very helpful. When you borrow notes from a classmate, you should photocopy them and then review them carefully and mark your copy with your own notes and questions. Use other provided resources to try and fill in the gaps. Finally, schedule a study session with the person who gave you the notes to review the material and confirm your understanding.</p></li>
+<li><p>If none of these options are available for you, use the course syllabus to determine what was covered in the class, then write a short paper (two pages or so) on the material using the class readings and reliable online sources. See your teacher during office hours to review your key findings and to answer any questions you still may have.</p></li>
+</ul>
+<section id="group-notes-a-collaborative-approach">
+<h4>Group Notes: A Collaborative Approach<a class="headerlink" href="#group-notes-a-collaborative-approach" title="Link to this heading">¶</a></h4>
+<p>Groups within a class can take notes together using file-sharing software on the Cloud. The individuals in the group can add to the document in real time as different individuals are adding themselves. This creates a collaborative document that all can use, download, (or adapt). This won’t work for all situations but can be very useful especially in a fast-moving classroom.</p>
+</section>
+<section id="keep-your-notes">
+<h4>Keep Your Notes<a class="headerlink" href="#keep-your-notes" title="Link to this heading">¶</a></h4>
+<p>Class is over, and you have a beautiful set of notes in your notebook or saved in your laptop. You have written the summary of the class in your own words. Now what?
+Start by organizing your notes. We recommend you use a three-ring binder for each of your subjects. Print your notes if you used a computer. If you used note cards, insert them in plastic photo holders for binders. Group all notes from a class or unit together in a section; this includes class notes, reading notes, and instructor handouts. You might also want to copy the instructor’s syllabus for the unit on the first page of the section.</p>
+<p>Next, spend some time linking the information across the various notes. Use the recall column in your notes to link to related information in other notes (e.g. “See class notes date/page”).
+If you have had a quiz or test on the unit, add it to your binder, too, but be sure to write out the correct answer for any item you missed. Link those corrections to your notes, too.
+Use this opportunity to write “notes on your notes.” Review your summary to see if it still is valid in light of your notes on the reading and any handouts you may have added to your notes package.
+You don’t need to become a pack rat with your notes. It is fairly safe to toss them after the end of a course except in the following cases:</p>
+<ol class="arabic simple">
+<li><p>If the course you took is a prerequisite for another course, or when the course is part of a standard progression of courses that build upon each other (this is very common in math and science courses), you should keep them as a reference and review for the follow-up course.</p></li>
+<li><p>If the course may pertain to your future major, keep your notes. You may not realize it now that they may have future value when you study similar topics or even the same topics in more depth.</p></li>
+<li><p>If you are very interested in the course subject and would like to get into the material through a more advanced course, independent study, or even research, keep your notes as a prep tool for further work.</p></li>
+</ol>
+<p><strong>Key Takeaways:</strong></p>
+<ul class="simple">
+<li><p>Good note-taking is a key strategy for academic success.</p></li>
+<li><p>Choose among effective note-taking styles for what works best for you and modify it to meet the needs of a specific class or instructor.</p></li>
+<li><p>List notes are generally less effective and not prioritized.</p></li>
+<li><p>Outlines work well for taking notes on a laptop when the instructor is well organized.</p></li>
+<li><p>Concept map notes are good for showing the relationships among ideas.</p></li>
+<li><p>The Cornell method is effective for calling out key concepts and organizing notes for review.</p></li>
+<li><p>Instructor handouts and PowerPoint presentations help with—but do not replace the need for personal note-taking.</p></li>
+<li><p>If you miss a class, explore your options for replacing your missing notes.</p></li>
+<li><p>Keep your notes organized in a way that makes it easy to study for tests and other uses in the future.</p></li>
+</ul>
+<p>Exercise: Note-taking</p>
+<ol class="arabic simple">
+<li><p>Name two advantages of the Cornell system over the list method of note-taking.</p></li>
+<li><p>Describe the benefits of—and potential problems with—taking class notes on a laptop.</p></li>
+<li><p>List at least three ways to make up for missing notes because you miss a class.</p></li>
+</ol>
+<p><strong>Text Attributions</strong></p>
+<ul class="simple">
+<li><p>This chapter was adapted from “Got Notes?” in University Success by N. Mahoney, B. Klassen, and M. D’Eon. Adapted by Mary Shier. CC BY-NC-SA.</p></li>
+<li><p>The first two paragraphs and text under the “Two Purposes for Taking Notes” heading are from “Take Notes from Lectures – That You’ll Actually Use” in University 101: Study, Strategize and Succeed by Kwantlen Polytechnic University. CC BY-SA.</p></li>
+</ul>
+<p><strong>Video Attributions</strong></p>
+<ul class="simple">
+<li><p>“How to Take Great Notes” by watchwellclass. Standard YouTube Licence.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Pauk, W. &amp; Owens, R.J.Q. (2013). How to Study in College. Boston, MA: Wadsworth, Cengage Learning. ↵</p></li>
+</ol>
+</p>
+</details>
+</section>
+</section>
+</section>
+<section id="ap-computational-thinking-practices-skills">
+<h2>AP Computational Thinking Practices: Skills<a class="headerlink" href="#ap-computational-thinking-practices-skills" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Practice 1: Program Design and Algorithm Development</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>1.A</strong> Determin an appropriate program design to solve a problem or accomplish a task (not assessed)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1.B</strong> Determine code that would be used to complete code segments</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>1.C</strong> Determine code that would be used to interact with completed program code</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Practice 2: Code Logic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>2.A</strong> Apply the meaning of specific operators</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2.B</strong> Determine the result or ouput based on statement execution order in a code segment without method calls (other than output)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2.C</strong> Determin the result or output based on the statement execution order in a code segment containing method calls</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2.D</strong> Determine the number of times a code segment will execute</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Practice 3: Code Implementation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>3.A</strong> Write program code to create objects of a class and call methods</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3.B</strong> Write program code to design a new type by creating a class</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3.C</strong> Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3.D</strong> Write program code to create, traverse, and manipulate elements in 1D or ArrayList objects</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3.E</strong> Write program code to create, traverse and manipulate elements in 2D array objects</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Practice 4: Code Testing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>4.A</strong> Use test-cases to find errors or validate results</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>4.B</strong> Identify errors in program code</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4.C</strong> Determine if two or more code segments yield equivalent results</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Practice 5:  Documentation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>5.A</strong> Describe the behavior of a given segment of program code</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5.B</strong> Explain why a code segment will not compile or work as intended</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>5.C</strong> Explain how the result of program code changes, given a change to the initial code</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5.D</strong> Describe the initial conditions that must be met for a program segment to work as intended or described</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Units</p></th>
+<th class="head"><p>Exam Weighting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unit 1: Primitive Types</p></td>
+<td><p>2.5 - 5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit 2: Using Objects</p></td>
+<td><p>5 - 7.5%</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit 3: Boolean Expressions and if Statements</p></td>
+<td><p>15 -17.5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit 4: Iteration</p></td>
+<td><p>17.5 - 22%</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit 5: Writing Classes</p></td>
+<td><p>5 - 7.5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit 6: Array</p></td>
+<td><p>10 - 15%</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit 7: ArrayList</p></td>
+<td><p>2.5 - 7.5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit 8: 2D Array</p></td>
+<td><p>7.5 - 10%</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit 9: Inheritance</p></td>
+<td><p>5 - 10%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit 10: Recursion</p></td>
+<td><p>5 - 7.5%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+ </p></details>
+</section>
+<section id="ap-computer-science-a-vocabulary">
+<h2>AP Computer Science A Vocabulary<a class="headerlink" href="#ap-computer-science-a-vocabulary" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p></br>
+<p><strong>Below is a comprehensive list of vocabulary words every AP Computer Science A student should be familiar with.</strong></p>
+<p><em>Did I miss a word? Please let me know…</em></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Term</p></th>
+<th class="head text-left"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>!</p></td>
+<td class="text-left"><p>A logical operator that reverses the state of a boolean value</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>&amp;&amp;</strong></p></td>
+<td class="text-left"><p>A logical operator that evaluates to true only if both sides are true</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>==</strong></p></td>
+<td class="text-left"><p>An operator to compare two pieces of primitive data or two addresses</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><img alt="2bars" src="https://user-images.githubusercontent.com/12989939/164557376-cd1f0068-ad3d-4115-81e9-75726b8c64e9.PNG" /></p></td>
+<td class="text-left"><p>A logical operator that evaluates to true if either side is true</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>abstract</p></td>
+<td class="text-left"><p>A class that is never meant to be instantiated except through a concrete subclass</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>accessor</p></td>
+<td class="text-left"><p>A method that returns the value of a private instance variable (aka getter)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>add</p></td>
+<td class="text-left"><p>The method for putting a new item in a list</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>addresses</p></td>
+<td class="text-left"><p>The location in memory at which an object is stored</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Aggregation</p></td>
+<td class="text-left"><p>Has - A Object relation</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>algorithm</p></td>
+<td class="text-left"><p>A step by step process for solving a problem</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>AND</p></td>
+<td class="text-left"><p>Only true if both inputs are true</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>arithmetic operators</p></td>
+<td class="text-left"><p>+, -, *, /, %</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>array</strong></p></td>
+<td class="text-left"><p>A collection of pieces of data stored as indexed items under one name</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>ArrayIndexOutOfBoundsException</p></td>
+<td class="text-left"><p>An error that happens when you refer to an element number larger than your array</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>arrayList</strong></p></td>
+<td class="text-left"><p>A template class for keeping track of collections of data with a changing size</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>assembler</p></td>
+<td class="text-left"><p>The part of the IDE that turns your code into assembly code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>assembly language</p></td>
+<td class="text-left"><p>The instruction set used by the CPU (aka machine code)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>assign</p></td>
+<td class="text-left"><p>Set a variable to a value</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>attribute</p></td>
+<td class="text-left"><p>A variable property of an object (aka field)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>autoboxing</strong></p></td>
+<td class="text-left"><p>A feature of Java that converts primitive types to their class counterpart</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>base 2 algorithm</p></td>
+<td class="text-left"><p>A mathematical operation that returns what power of 2 a number is</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>base case</p></td>
+<td class="text-left"><p>A condition that triggers a recursive process to end</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>base class</p></td>
+<td class="text-left"><p>A class that another class inherits from (aka superclass)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>behavior</p></td>
+<td class="text-left"><p>An ability of an object (aka method)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Binary Search</p></td>
+<td class="text-left"><p>A search technique on ordered data that cuts the list in half on each check</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>bit</p></td>
+<td class="text-left"><p>A binary digit</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>block</p></td>
+<td class="text-left"><p>A piece of code that is separated from the code around it</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>body</p></td>
+<td class="text-left"><p>The code inside of a method</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>boolean</strong></p></td>
+<td class="text-left"><p>A type of variable or operation that evaluates to true or false</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>braces</p></td>
+<td class="text-left"><p>Symbols that define the start and end of a block of code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>break</strong></p></td>
+<td class="text-left"><p>A statement to jump outside of a loop or conditional branch</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>bugs</p></td>
+<td class="text-left"><p>Problems that prevent code from working properly</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>byte</p></td>
+<td class="text-left"><p>Eight bits</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>bytecode</p></td>
+<td class="text-left"><p>The Java code that is ready to be processed by an interpreter</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>capacity</p></td>
+<td class="text-left"><p>The amount of space allocated for a List</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>case</strong></p></td>
+<td class="text-left"><p>Identifies a code choice of a switch statement</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>cast</p></td>
+<td class="text-left"><p>Forcing an expression of one data type to fit into a variable with a different type</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>catch</strong></p></td>
+<td class="text-left"><p>A keyword used to collect and handle specific types of exceptions</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>change</p></td>
+<td class="text-left"><p>Setting a part of the condition to a different value so the code doesn’t loop infinitely</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>char</p></td>
+<td class="text-left"><p>A data type for holding a single letter, digit or symbol</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>class</p></td>
+<td class="text-left"><p>Code that defines the attributes and behaviors of an object</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>class</p></td>
+<td class="text-left"><p>definition	All of the method headers and instance variables that make up a class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>class</p></td>
+<td class="text-left"><p>declaration	The header line of a class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>class</p></td>
+<td class="text-left"><p>variable	A variable that is shared among all instances of a class (aka static field)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>client</p></td>
+<td class="text-left"><p>A class that uses another class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>column</p></td>
+<td class="text-left"><p>A vertical organization of items in a 2D array, the second set of brackets</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>comments</p></td>
+<td class="text-left"><p>A written description of what code does for human readers</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Comparable</p></td>
+<td class="text-left"><p>An interface requiring compareTo that allows built-in sort and searches to be used on a class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>comparator</p></td>
+<td class="text-left"><p>A class implementing compare that creates a tool for sorting and searching</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>compare</p></td>
+<td class="text-left"><p>A tool that is used to check the order between two objects passed as parameters</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>compareTo</strong></p></td>
+<td class="text-left"><p>A method that is used to check the order between an object and a single parameter</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>comparisons</p></td>
+<td class="text-left"><p>When an expression or constant is checked for a relationship with another</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>compatible</p></td>
+<td class="text-left"><p>Data types that contain similar enough values that they can be cast to each other</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>compiler</p></td>
+<td class="text-left"><p>The part of an IDE used to change turn code into software</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>compound</p></td>
+<td class="text-left"><p>A complex line of code with made of multiple expressions</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>compound assignment operator</p></td>
+<td class="text-left"><p><strong>+=</strong>, <strong>-=</strong>, <strong>*=</strong>, <strong>/=</strong>, <strong>%=</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>concatenation</strong></p></td>
+<td class="text-left"><p>An operation that creates a new string out of other strings by sticking them together</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>concrete</p></td>
+<td class="text-left"><p>A class that can be instantiated, a non abstract class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>condition</p></td>
+<td class="text-left"><p>A statement that can be evaluated to determine if a piece of code will be run</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>conditional</p></td>
+<td class="text-left"><p>A statement that is dependent on an expression that evaluates to true or false</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>console application</p></td>
+<td class="text-left"><p>A piece of software that runs without a GUI</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>conspicuous</p></td>
+<td class="text-left"><p>Variable names that clearly describe the value they represent</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>constant</p></td>
+<td class="text-left"><p>A variable that cannot change once its initial value is assigned</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>constructor</strong></p></td>
+<td class="text-left"><p>A piece of code that is run when an object is instantiated/created</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>contents</p></td>
+<td class="text-left"><p>What is inside of a data set or element</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>convention</p></td>
+<td class="text-left"><p>An agreed upon way of coding that is not required by the computer</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>convert</p></td>
+<td class="text-left"><p>Changing values of one type into another</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>copy constructor</p></td>
+<td class="text-left"><p>A special constructor that takes a parameter of the same type as the class being created</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>CPU</p></td>
+<td class="text-left"><p>The “brain” of your computer</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>data type</p></td>
+<td class="text-left"><p>The kind of information that can be held in a variable</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>debugger</strong></p></td>
+<td class="text-left"><p>The part of an IDE that helps you find errors in your code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>declaration</p></td>
+<td class="text-left"><p>The line where a class, method or variable is first created</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>decrement</strong></p></td>
+<td class="text-left"><p>Decreasing a value by 1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>default constructor</p></td>
+<td class="text-left"><p>A constructor provided by the compiler when no constructor is coded</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>DeMorgan’s Laws</strong></p></td>
+<td class="text-left"><p>Rules that describe how logical operations relate and transform into each other</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>derived class</p></td>
+<td class="text-left"><p>A class that inherits from another class (aka subclass)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>digital</p></td>
+<td class="text-left"><p>Using whole numbers</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>direct manipulation interface</p></td>
+<td class="text-left"><p>An interface that allows the user to interact with program constructs manually</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>do-while</strong></p></td>
+<td class="text-left"><p>A type of loop with the condition at the end that always executes at least once</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>document</p></td>
+<td class="text-left"><p>To create help files and comments to make notes for future users and editors</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>dot notation</p></td>
+<td class="text-left"><p>A way of referencing a method or variable that is part of a class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>double</strong></p></td>
+<td class="text-left"><p>The most common data type for decimal numbers</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>editor</p></td>
+<td class="text-left"><p>The part of an IDE used to type code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>element</p></td>
+<td class="text-left"><p>A individual item in an array or list</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>empty string</p></td>
+<td class="text-left"><p>A string variable that has memory allocated but no text (“”)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>encapsulation</strong></p></td>
+<td class="text-left"><p>The practice of using setters and getters to control access to private variables</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>equals</p></td>
+<td class="text-left"><p>A method that compares objects to see if they are the same</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>equation</p></td>
+<td class="text-left"><p>A mathematical statement that two expressions have the same value</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>evaluate</p></td>
+<td class="text-left"><p>Determine the current value of an expression</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>exception</p></td>
+<td class="text-left"><p>An problem that occurs while a program is running that causes it to crash</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>exception handling</p></td>
+<td class="text-left"><p>Code intended to catch runtime errors and handle them to prevent a crash</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>executable</p></td>
+<td class="text-left"><p>A file ready to be run as a program by an operating system</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>expression</p></td>
+<td class="text-left"><p>A piece of code that will be evaluated when it is run</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>extends</strong></p></td>
+<td class="text-left"><p>A keyword that is used to cause a class to inherit from another class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>false</p></td>
+<td class="text-left"><p>The opposite of true</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>field</p></td>
+<td class="text-left"><p>A variable created and stored at the object level (aka instance variable)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>final</p></td>
+<td class="text-left"><p>A keyword used for creating a constant</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>finally</p></td>
+<td class="text-left"><p>A keyword that attempts to run code after an exception has happened</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>flowchart</p></td>
+<td class="text-left"><p>A graphic showing the paths that execution of a program may follow</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>for</strong></p></td>
+<td class="text-left"><p>A type of loop with the initialization, condtion and chage built into the header. A fixed number of times loop.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>for-each loop</p></td>
+<td class="text-left"><p>A special code block for traversing an array or list</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>formatting</p></td>
+<td class="text-left"><p>Making numbers appear in as text in a particular way</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>gate</p></td>
+<td class="text-left"><p>A component that does simple binary calculations</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>generic type</p></td>
+<td class="text-left"><p>A superclass type shared by multiple subclass types</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>getter</p></td>
+<td class="text-left"><p>A method that returns the value of a private instance variable (aka accessor)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>GUI</p></td>
+<td class="text-left"><p>The graphical user interface for interacting with a user</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>hardware</p></td>
+<td class="text-left"><p>Physical component of a device</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>HAS-A</p></td>
+<td class="text-left"><p>A relationship between classes where one class is used by another</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>hierarchy</p></td>
+<td class="text-left"><p>A system for organizing in which each item is a superclass and/or subclass of another item</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>high level language</p></td>
+<td class="text-left"><p>A language like Java that is converted to machine code before it is executated</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>IDE</strong></p></td>
+<td class="text-left"><p>An integrated development environment that contains the tools you need to write a program</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>if-else</strong></p></td>
+<td class="text-left"><p>The keywords used for conditional branching</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-left"><p>A value that cannot be changed once created</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>implementation</p></td>
+<td class="text-left"><p>The final code used to solve a programming problem</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>implements</p></td>
+<td class="text-left"><p>A keyword that indicates a class will perform the job of an interface</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>implicit</p></td>
+<td class="text-left"><p>Something that is assumed to be the case if not stated otherwise</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>import</strong></p></td>
+<td class="text-left"><p>A keyword that allows you to use code from another package in your code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>increment</p></td>
+<td class="text-left"><p>To increase a value by a set amount</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>indentation</p></td>
+<td class="text-left"><p>Shifting code to the right to indicated that it is inside a block</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>index</strong></p></td>
+<td class="text-left"><p>The number that represents each letter or element in a String, array or a List</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>IndexOutOfBoundsException</p></td>
+<td class="text-left"><p>An error that happens when code accesses an element in an array that doesn’t exist</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>infinite loop</p></td>
+<td class="text-left"><p>A piece of code that repeats itself forever</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>information hiding</p></td>
+<td class="text-left"><p>The practice of making instance variables private to protect the internals operations of the code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>inheritance</strong></p></td>
+<td class="text-left"><p>When a subclass gets code and variables originally created in the parent class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>initialize</strong></p></td>
+<td class="text-left"><p>Allocate the memory for an array and set up beginning values</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Insertion Sort</p></td>
+<td class="text-left"><p>A sort with O(n^2) speed that finds the correct position of each element swapping as needed</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>instance</p></td>
+<td class="text-left"><p>An object based on a class that exists when a program is running</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>instance variable</p></td>
+<td class="text-left"><p>A variable stored at the class level (aka field)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>instantiate</strong></p></td>
+<td class="text-left"><p>Creating and setting up and actual instance of a class to link to its variable, uses “new” keyword</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>int</strong></p></td>
+<td class="text-left"><p>The most common data type for non decimal numbers</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>integer division</p></td>
+<td class="text-left"><p>The answer for why 7/2 is 3 and not 3.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>interface</p></td>
+<td class="text-left"><p>A programming construct that provides headers of required methods, but no code or variables</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>interpret</p></td>
+<td class="text-left"><p>Preparing a Java application to be run for a specific operating system</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>invoke</p></td>
+<td class="text-left"><p>A word meaning to call a method and run its code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>IS-A</p></td>
+<td class="text-left"><p>A subclass/superclass relationship between classes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>iteration</strong></p></td>
+<td class="text-left"><p>One of many times executing the same piece of code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>iterative statements</p></td>
+<td class="text-left"><p>Sections of code that repeat in a predictable order</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>JavaDoc</p></td>
+<td class="text-left"><p>A tool that creates documentation for code using comments with special syntax and keywords</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>JDK</p></td>
+<td class="text-left"><p>The Java Development Kit needed for writing Java code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>key</p></td>
+<td class="text-left"><p>A piece of data in an object used to sort on</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>length</p></td>
+<td class="text-left"><p>The number of items in an array</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>length()</strong> method</p></td>
+<td class="text-left"><p>Used to find the number of characters in a string</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>literal strings</p></td>
+<td class="text-left"><p>Text that is written in code between quotation marks</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>local variable</p></td>
+<td class="text-left"><p>A variable created inside a method or other block of code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>logic error</p></td>
+<td class="text-left"><p>A coding mistake that causes code to act differently than planned</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>logical operators</p></td>
+<td class="text-left"><p>Operators that combine or compare boolean expressions (eg. &amp;&amp;,</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>loop invariant</p></td>
+<td class="text-left"><p>A relationship between variables that is checked to determine whether to loop again</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>loops	A</p></td>
+<td class="text-left"><p>ny piece of code that repeats when it reaches the end</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>machine code</p></td>
+<td class="text-left"><p>A CPU specific binary language (aka assembly code)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Mergesort</p></td>
+<td class="text-left"><p>A sort with O(n log n) speed that breaks the data set in half calling itself recursively</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>method</p></td>
+<td class="text-left"><p>Code that defines an ability or behavior of an object</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>minimized</p></td>
+<td class="text-left"><p>Code that takes the least space possible</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>modifier</p></td>
+<td class="text-left"><p>A method used to change the value of a private variable (aka setter, mutator)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>modulus	(%)</strong></p></td>
+<td class="text-left"><p>An operator for finding the remainder from integer division</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>motherboard</p></td>
+<td class="text-left"><p>Computer component all other parts connect to</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>mutator</p></td>
+<td class="text-left"><p>A method used to change the value of a private variable (aka setter, modifer)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>nested</p></td>
+<td class="text-left"><p>Code that is inside another block of code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>nested loop</strong></p></td>
+<td class="text-left"><p>A piece of repeating code inside another piece of repeating code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>new operator</p></td>
+<td class="text-left"><p>A keyword used when calling the constructor for an object being instantiated</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>newline</p></td>
+<td class="text-left"><p>A character that tells the console to move the cursor to the next line</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>no-args constructor</p></td>
+<td class="text-left"><p>An empty constructor, one that takes no parameters</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>NOT</p></td>
+<td class="text-left"><p>Reverses value of the input</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>null</strong></p></td>
+<td class="text-left"><p>A keyword meaning “has no value”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>O notation</p></td>
+<td class="text-left"><p>A way of showing the relative theoretical speed of a search or sort algorithm</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>object</p></td>
+<td class="text-left"><p>An instance of a class that exists when a program is running</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>object model</p></td>
+<td class="text-left"><p>A planning tool used to design a class before coding it</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>object oriented programming</p></td>
+<td class="text-left"><p>A programming philosophy in which code is written to represent real world things or ideas</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>OR</strong></p></td>
+<td class="text-left"><p>True if any input is true</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>order of operators</p></td>
+<td class="text-left"><p>The rules that determine how the computer chooses which operations are evaluated first</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>overloaded</p></td>
+<td class="text-left"><p>When a method is written in different ways with two or more possible parameter sets</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>package</p></td>
+<td class="text-left"><p>A collection of java classes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>parameter</p></td>
+<td class="text-left"><p>A variable whose value or reference is passed into a method</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>parse</p></td>
+<td class="text-left"><p>Move through a string one letter or word at a time</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>partitioning</p></td>
+<td class="text-left"><p>The process of breaking a set into two or more pieces</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pass by reference</p></td>
+<td class="text-left"><p>When a parameter is sent as a memory location</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>pass by value</p></td>
+<td class="text-left"><p>When a parameter is sent as data</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pattern recognition</p></td>
+<td class="text-left"><p>The ability to recognize a form of organization in a data set</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>peripheral</p></td>
+<td class="text-left"><p>Computer part not inside the chassis</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pivot</p></td>
+<td class="text-left"><p>A value in a set used to split the set into two parts on which the data will be sorted</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>polymorphism</strong></p></td>
+<td class="text-left"><p>The concept that a single named behavior can be performed differently by various subclasses</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>primitive type</strong></p></td>
+<td class="text-left"><p>One of the built-in non-object data types that is stored by value Ex. <em>Boolean, char, byte, int, short, long, float, and double</em></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>printf</strong></p></td>
+<td class="text-left"><p>A special method for Strings that includes formatting characters in the string literal</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>private</strong></p></td>
+<td class="text-left"><p>A keyword that makes a variable or method accessible from only inside the class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>procedural language</p></td>
+<td class="text-left"><p>A language where programs are expected to operate in a predictable order</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pseudocode</p></td>
+<td class="text-left"><p>A way of designing a program using written descriptions of what the code will be</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>public</p></td>
+<td class="text-left"><p>A keyword that makes a variable or method accessible from outside the class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Quicksort</p></td>
+<td class="text-left"><p>A sort with O(n log n) speed that splits the data using a randomly chosen pivot</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>RAM</p></td>
+<td class="text-left"><p>Computer component that stores currently in-use data</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>readability</p></td>
+<td class="text-left"><p>A measure of how easily something is understood by others</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>recursive</p></td>
+<td class="text-left"><p>A piece of code that uses itself to solve the problem</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>redundancy</p></td>
+<td class="text-left"><p>Allows a something to be understood even if some of it is missing or wrong</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>reference</p></td>
+<td class="text-left"><p>An address that holds the memory location of the variable’s data</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>regular expression</p></td>
+<td class="text-left"><p>A predefined set of codes for limiting parse and search type String operations</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>relational operators</p></td>
+<td class="text-left"><p>Operators that compare two expressions (eg. &lt;&gt;, !=, ==)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>remove</p></td>
+<td class="text-left"><p>A method for taking an item out of a list and filling any gap</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>reserved word</p></td>
+<td class="text-left"><p>Special words used by the Java language that cannot be used for naming</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>return</strong></p></td>
+<td class="text-left"><p>A statement that causes a method to end and may send back a value to the calling code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>return type</p></td>
+<td class="text-left"><p>The kind of data that will be sent back by a method</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>row</p></td>
+<td class="text-left"><p>A horizontal section of a 2D array, the first set of square brackets</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>scope</p></td>
+<td class="text-left"><p>The part of code in which a variable exists or is accessible</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>search</p></td>
+<td class="text-left"><p>Finding a particular item in a list, array or other collection</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Selection Sort</p></td>
+<td class="text-left"><p>A sort with O(n^2) speed that checks each element against every other element</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Sequential Search</p></td>
+<td class="text-left"><p>A search that checks each element from beginning to end</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>set</p></td>
+<td class="text-left"><p>A method for changing the value of an item in a list</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>setter</p></td>
+<td class="text-left"><p>A method that is used to change the value of a private variable (aka modifier)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>short-circuit evaluation</p></td>
+<td class="text-left"><p>A chain of relational or conditional expressions that stops evaluating as soon as the result is known</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>signature</p></td>
+<td class="text-left"><p>The header line of a method that defines its return type, name and parameter list</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>size</p></td>
+<td class="text-left"><p>The number of items in an ArrayList</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>software engineering</p></td>
+<td class="text-left"><p>Planning, designing, building and testing computer programs</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>sorting</p></td>
+<td class="text-left"><p>Putting a collection of data in order</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>source code</p></td>
+<td class="text-left"><p>The original code created by the programmer</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>square brackets</p></td>
+<td class="text-left"><p>Used to create arrays and refer to a specific element</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>stack	T</p></td>
+<td class="text-left"><p>he part of the computer that keeps track currently running layers of code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>statement</p></td>
+<td class="text-left"><p>A complete and syntactically correct line of code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>static field</p></td>
+<td class="text-left"><p>A variable that is shared among all instances of a class (aka class variable)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>static method</p></td>
+<td class="text-left"><p>A method that uses no (non-static) instance variables and can be called without an instance of the class</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>String</strong></p></td>
+<td class="text-left"><p>A built-in class for holding words, sentences, parahraphes, etc.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>style</p></td>
+<td class="text-left"><p>The conventions agreed upon by programmers for how to write code to be understood by others</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>subclass</p></td>
+<td class="text-left"><p>A class that inherits from another class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>subinterface</p></td>
+<td class="text-left"><p>An interface that inherits from another interface</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>subscript</p></td>
+<td class="text-left"><p>A way of writing an index to an array in pseudocode</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>substring</p></td>
+<td class="text-left"><p>There are 2 ways to use the substring method. The first returns a substring of the original string. The second method returns a new string from a specified index and extends to a defined end or up to <code class="docutils literal notranslate"><span class="pre">endIndex</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>super</p></td>
+<td class="text-left"><p>A keyword that is used to access methods and fields from a base class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>superclass</p></td>
+<td class="text-left"><p>A class that another class inherits from (aka base class)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>superinterface</p></td>
+<td class="text-left"><p>An interface that another interface inherits from</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>switch</p></td>
+<td class="text-left"><p>A keyword that chooses what code to run based on a single value</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>symbolic</p></td>
+<td class="text-left"><p>A name that represents another value</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>syntax</p></td>
+<td class="text-left"><p>The rules for how code must be entered to compile and work</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>syntax error</p></td>
+<td class="text-left"><p>A coding mistake that prevents code from compiling</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>testing</p></td>
+<td class="text-left"><p>Checking the condition on a piece of code</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>this</strong></p></td>
+<td class="text-left"><p>A keyword that refers to the current instance of the class</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>transistor</p></td>
+<td class="text-left"><p>A tiny on-off switch</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>transmission</p></td>
+<td class="text-left"><p>Moving something from one place to another</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>traversal</p></td>
+<td class="text-left"><p>The process of interacting with each element in an array or list in order</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>true</p></td>
+<td class="text-left"><p>The opposite of false</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>try</p></td>
+<td class="text-left"><p>A keyword that begins a block code that could cause an exception</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>Two-Dimensional Array</strong></p></td>
+<td class="text-left"><p>An array of arrays</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>uninitialized string</p></td>
+<td class="text-left"><p>A string variable that is named but has nowhere to store its data</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>value</p></td>
+<td class="text-left"><p>Data represented by a variable or expression</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>variable</p></td>
+<td class="text-left"><p>A named value in a program that can contain a specific type of data</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>visual prototyping and design tools</p></td>
+<td class="text-left"><p>Tools that allow an engineer to plan their software through drawings and flow models</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>while</strong></p></td>
+<td class="text-left"><p>A type of loop that runs as long as its condition is true</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>whitespace</p></td>
+<td class="text-left"><p>Any space, tab or new line charcter in the code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>wrapper class</p></td>
+<td class="text-left"><p>A class designed to add behaviors to a primitive type</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</p></details>
+</section>
+<section id="java-style-guidelines">
+<h2>Java Style Guidelines<a class="headerlink" href="#java-style-guidelines" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p></br>
+<p>Please review the Java Style Guidelines</p>
+<section id="block-comment-templates-with-examples">
+<h3>Block Comment Templates with Examples<a class="headerlink" href="#block-comment-templates-with-examples" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://www2.cs.arizona.edu/~mccann/styletemplates.html#EXAMPLES">Source Link</a></p>
+<p>At the top of the file containing your program’s main() method, place an `external’ block comment containing the following content.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
+<span class="cm"> |   Assignment:  Program #[n]:  [Assignment Title]</span>
+<span class="cm"> |       Author:  [Your Name (Your E-mail Address)]</span>
+<span class="cm"> |      Partner:  [Partner&#39;s Name (E-mail Address)]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Course Name:  [Course Name]</span>
+<span class="cm"> |   Instructor:  John Smith</span>
+<span class="cm"> |     Due Date:  [Due Date and Time]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |</span>
+<span class="cm"> |     Language:  [Programming language and version used.]</span>
+<span class="cm"> | Ex. Packages:  [List names and sources of all external packages</span>
+<span class="cm"> |                required by this program.]</span>
+<span class="cm"> |                </span>
+<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
+<span class="cm"> |                details here, otherwise clearly state that you know</span>
+<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> *===========================================================================*/</span>
+</pre></div>
+</div>
+<p>An internal block comment belongs immediately ahead of each method of your program, with two exceptions. First, main() is assumed to be covered by the external block comment. Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">        |  Method [Method Name]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Purpose:  [Explain what this method does to support the correct</span>
+<span class="cm">        |      operation of its class, and how it does it.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Pre-condition:  [Any non-obvious conditions that must exist</span>
+<span class="cm">        |      or be true before we can expect this method to function</span>
+<span class="cm">        |      correctly.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Post-condition: [What we can expect to exist or be true after</span>
+<span class="cm">        |      this method has executed under the pre-condition(s).]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Parameters:</span>
+<span class="cm">        |      parameter_name -- [Explanation of the purpose of this</span>
+<span class="cm">        |          parameter to the method.  Write one explanation for each</span>
+<span class="cm">        |          formal parameter of this method.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Returns:  [If this method sends back a value via the return</span>
+<span class="cm">        |      mechanism, describe the purpose of that value here, otherwise</span>
+<span class="cm">        |      state &#39;None.&#39;]</span>
+<span class="cm">        *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p>Each class you write, except the class containing main(), must have a block comment of this form ahead of it.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*+----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Class [Class Name] </span>
+<span class="cm"> ||</span>
+<span class="cm"> ||         Author:  [Your Name]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||        Purpose:  [A description of why this class exists.  For what</span>
+<span class="cm"> ||                   reason was it written?  Which jobs does it perform?]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Inherits From:  [If this class is a subclass of another, name it.</span>
+<span class="cm"> ||                   If not, just say &quot;None.&quot;]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||     Interfaces:  [If any predefined interfaces are implemented by</span>
+<span class="cm"> ||                   this class, name them.  If not, ... well, you know.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> |+-----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||      Constants:  [Name all public class constants, and provide a very</span>
+<span class="cm"> ||                   brief (but useful!) description of each.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> |+-----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||   Constructors:  [List the names and arguments of all defined</span>
+<span class="cm"> ||                   constructors.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Class Methods:  [List the names, arguments, and return types of all</span>
+<span class="cm"> ||                   public class methods.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Inst. Methods:  [List the names, arguments, and return types of all</span>
+<span class="cm"> ||                   public instance methods.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ++-----------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p><strong>Examples of Good and Bad Block Comments</strong></p>
+<p>Contrary to popular student opinion, I don’t require all of the commenting as an annoyance to you. It has been estimated that about 70% of programming effort is put into the maintenance of old code, and the rest into the development of new code. It is safe to assume that, should you do some programming in your career, you will be needing to modify someone else’s code to fix an old bug or to extend the code’s functionality. Commenting exists to help those unfortunate programmers who have to look at the code months or years after it was written. When you write comments for your code, keep that in mind and include useful information rather than details that are plainly obvious. The future programmers will know the language; you don’t need to explain what “i ≤ j” means! Instead, <mark>explain why it’s important that this condition be checked at this point in the code. Do you understand the difference?</mark></p>
+<p>As an example, let’s imagine that you’re going to write a subprogram that searches a list of earthquake intensities to find the most powerful quake. I am not going to show any code for this routine; this is intentional! The internal block comment is meant to give an overview of the construction and operation of the routine. If the reader wants more detail, he or she can move on to read the code, which will have its own comments about the code itself.</p>
+<p><strong>A Bad Internal Block Comment</strong></p>
+<p>Here’s our first example of a block comment for our earthquake intensity search routine. This is not an actual example from a student program, but it does (I hope!) capture most of the mistakes students make when they wait until the last minute to write a comment:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">         |  Method FIND_BIGGEST_QUAKE</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Purpose:  Find the biggest earthquake.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Pre-condition: Earthquakes are available.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Post-condition: We found the biggest one.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Parameters:</span>
+<span class="cm">	 |	quakeList -- the quakes</span>
+<span class="cm">	 |	size      -- size of the list</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Returns:  The biggest quake</span>
+<span class="cm">         *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p>What’s wrong with this comment? Most everything! Where to start?</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The description of the purpose of the function is useless; we could have figured as much from the name of the method alone! What we really need to know is exactly what job this method performs. For instance, it would be really nice to know what “biggest” means in this context. Largest measure on the Richter Scale? Most damage caused?</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Pre- and Post-conditions are supposed to tell us what needs to be true before (Pre-) and after (Post-) this method executes. They need to be clear and unambiguous, not wishy-washy. These are wishy-washy.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The structure of the quake_list parameter is not even mentioned.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> How is the list size measured? By number of items or by index position of the last item?</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Exactly what about the biggest earthquake is being returned? Its position in the list? Its measured size? The entire entry from the list?</p></li>
+</ul>
+<p>Again, the point is that anyone reading this comment will have learned almost nothing about this method. You are forcing the reader to wade through the code to learn anything of substance.</p>
+<p><strong>A Good Internal Block Comment</strong></p>
+<p>Compare the first attempt to this one:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">         |  Method FIND_BIGGEST_QUAKE</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Purpose:  Identify the earthquake from the list of earthquake</span>
+<span class="cm">	 |	intensities (quakeList) that has the largest magnitude.</span>
+<span class="cm">	 |	It is assumed that the given list of quake intensities is</span>
+<span class="cm">	 |	an array-based list of unordered Richter Scale </span>
+<span class="cm">	 |	magnitudes; this function performs a simple sequential</span>
+<span class="cm">	 |	search through the array to locate the position of the</span>
+<span class="cm">	 |	largest magnitude (the largest value) in the list.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Pre-condition: quakeList holds 1 or more intensities; the</span>
+<span class="cm">         |      intensities are in no particular order; numEntries holds</span>
+<span class="cm">         |      the exact number of entries currently in the list.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Post-condition: quakeList and numEntries are unchanged; the </span>
+<span class="cm">         |      list position of the entry with the largest magnitude has </span>
+<span class="cm">         |      been identified; the position is within the boundaries</span>
+<span class="cm">         |      of the array.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Parameters:</span>
+<span class="cm">	 |	quakeList -- the array of earthquake magnitudes.  This</span>
+<span class="cm">	 |		is an array of real numbers; the first magnitude</span>
+<span class="cm">	 |		is assumed to be at index 0.</span>
+<span class="cm">	 |	numEntries -- the quantity of magnitudes in quakeList.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Returns:  The index (position) of the largest earthquake</span>
+<span class="cm">	 |	magnitude in the quakeList array.</span>
+<span class="cm">         *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p><strong>Java Style Guidelines</strong></p>
+<p>Here are guidelines for writing Java programs in this course.</p>
+</section>
+<section id="spaces">
+<h3>Spaces<a class="headerlink" href="#spaces" title="Link to this heading">¶</a></h3>
+<p>Put spaces on both sides of arithmetic operators.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="mi">4</span><span class="o">+</span><span class="mf">7.5</span><span class="o">/</span><span class="n">c</span><span class="p">);</span>
+
+<span class="c1">// Correct</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">7.5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The keywords if, else, for, do, and while are always followed by a space. Put a space between a closing parenthesis and an opening brace. When a closing brace is on the same line as an else, follow it with a space.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">       </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">    </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Do not put spaces after an opening parenthesis or before a closing parenthesis:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Correct</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="braces-and-indenting">
+<h3>Braces and Indenting<a class="headerlink" href="#braces-and-indenting" title="Link to this heading">¶</a></h3>
+<p>There are several ways of placing braces in your Java source code. One thing they all have in common: closing braces are always the first non-whitespace character on a line. They are never placed at the end of a line:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Any of these are correct; the book we are currently using uses the third style:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Always enclose the body of an if clause, else clause, or loop in braces, even when there is only one statement in the body:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You may indent either two or four spaces, and you may use the TAB character instead of spaces. You have to be correct and consistent in your indenting and placement of braces. Note how the if-else-if chain is aligned in the correct example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Incorrect</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="c1">//Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="names-and-declarations">
+<h3>Names and Declarations<a class="headerlink" href="#names-and-declarations" title="Link to this heading">¶</a></h3>
+<p>Variable names begin with lower case letters. If you have a multi-word variable name, prefer camelCase to snake_case. If you have a final (constant), use all upper case for its name, and, if it is a multi-word name, use SNAKE_CASE. Names of Java classes begin with a upper case letter:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="kd">class</span> <span class="nc">example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">unitprice</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">salestaxrate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.075</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+<span class="c1">// Correct</span>
+<span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">unit_price</span><span class="p">;</span><span class="w"> </span><span class="c1">// acceptable</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">unitPrice</span><span class="p">;</span><span class="w">  </span><span class="c1">// preferred</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">SALES_TAX_RATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.075</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ..</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Put only one declaration per line:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">cut</span><span class="p">,</span><span class="w"> </span><span class="n">clarity</span><span class="p">,</span><span class="w"> </span><span class="n">caratWeight</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="c1">// Correct</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">cut</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">clarity</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">caratWeight</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="long-lines">
+<h3>Long Lines<a class="headerlink" href="#long-lines" title="Link to this heading">¶</a></h3>
+<p>Limit line length to 75, no more than 79, characters. Many IDEs will let you display a “line length marker” and set its limit. They might also show the current column number in the status bar at the bottom of the editor window.</p>
+<p>Prefer multiple println() calls to one print() or println() with multiple \n:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// difficult to read and edit</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Weight: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\nVolume: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">volume</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\nSurface Area: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+<span class="c1">// better</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weight</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Volume: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Surface Area: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you break a formula across lines, you can break with the operator at the end of a line or beginning of the next line. Just be consistent.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Either of these is correct</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">weight</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">volume</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span>
+<span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">weight</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">volume</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span>
+<span class="w">    </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h3>
+<p>The code tells you what the program does. Comments should tell you why or how. (The book will often have “what” comments because the book has to explain what a concept is.)</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// &quot;what&quot; comment</span>
+<span class="n">month</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// add one to month</span>
+<span class="c1">// &quot;why&quot; comment</span>
+<span class="cm">/* System returns 0-11 for January-December,</span>
+<span class="cm"> * but people expect months to be 1-12.</span>
+<span class="cm"> */</span>
+<span class="n">month</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The exception to this guideline is the comments at the start of your program. These must have your name, the date, and a description of the purpose of the program. The description must be clear enough that someone who has not read the assignment will understand what the program does. These comments are incorrect:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Assignment 3</span>
+<span class="cm"> * J. Fulano - Oct 4, 2525</span>
+<span class="cm"> */</span>
+<span class="cm">/*</span>
+<span class="cm"> * Program uses if statements</span>
+<span class="cm"> * and while loops.</span>
+<span class="cm"> * J. Doe - Oct 4, 2525</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>This one is correct:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">* Ask user to enter a positive integer, and print out whether</span>
+<span class="cm">* that integer is prime or not.</span>
+<span class="cm">* Program does this repeatedly until user enters zero as input; </span>
+<span class="cm">* negative integers give an error message.</span>
+<span class="cm">* J. Doe - Oct 4, 2525</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</section>
+<section id="loops">
+<h3>Loops<a class="headerlink" href="#loops" title="Link to this heading">¶</a></h3>
+<p>Avoid break and continue whenever possible; instead, carefully think through the loop condition. Do not use while (true) with break to substitute for thinking through the correct condition!
+Consider the following code to read into an array until it is full or the user enters zero:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Very bad style</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">MAX</span><span class="o">]</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter age or 0 to quit: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">ages</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MAX</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// better</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">MAX</span><span class="o">]</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter age or 0 to quit: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ages</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MAX</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// best</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">MAX</span><span class="o">]</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAX</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter age or 0 to quit: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ages</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h3>
+<p>Do not put a space between the method name and the parameter list.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Incorrect</span>
+<span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cube</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">12.0</span><span class="w"> </span><span class="p">);</span>
+<span class="c1">// Correct</span>
+<span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cube</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cube</span><span class="p">(</span><span class="mf">12.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>It is a good idea to put comments before a method that describes the method’s purpose, inputs, and return value (if any):</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Calculate monthly payment on a loan, given:</span>
+<span class="cm"> * principal: amount of the loan</span>
+<span class="cm"> * interestRate: annual percentage rate as a decimal (0.075 for 7.5%)</span>
+<span class="cm"> * years: number of years of the loan</span>
+<span class="cm"> * returns the monthly payment amount of the loan</span>
+<span class="cm"> */</span>
+<span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">payment</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">interestRate</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">years</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="output">
+<h3>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h3>
+<p>When lining up output, prefer spaces and specific formatting over tabs:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// OK</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Height (cm):\t\t%.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Weight (kg):\t\t%.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Blood alcohol:\t%.3f%%\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bac</span><span class="p">);</span>
+<span class="n">Height</span><span class="w"> </span><span class="p">(</span><span class="n">cm</span><span class="p">):</span><span class="w">            </span><span class="mf">160.30</span>
+<span class="n">Weight</span><span class="w"> </span><span class="p">(</span><span class="n">kg</span><span class="p">):</span><span class="w">            </span><span class="mf">50.40</span>
+<span class="n">Blood</span><span class="w"> </span><span class="n">alcohol</span><span class="p">:</span><span class="w">  </span><span class="mf">0.032</span><span class="o">%</span><span class="w"> </span>
+
+<span class="c1">// Better</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Height (cm):   %6.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Weight (kg):   %6.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Blood alcohol: %7.3f%%\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bac</span><span class="p">);</span>
+
+<span class="n">Height</span><span class="w"> </span><span class="p">(</span><span class="n">cm</span><span class="p">):</span><span class="w">   </span><span class="mf">160.30</span>
+<span class="n">Weight</span><span class="w"> </span><span class="p">(</span><span class="n">kg</span><span class="p">):</span><span class="w">    </span><span class="mf">50.40</span>
+<span class="n">Blood</span><span class="w"> </span><span class="n">alcohol</span><span class="p">:</span><span class="w">   </span><span class="mf">0.032</span><span class="o">%</span>
+</pre></div>
+</div>
+ </p>
+ </details>
+</section>
+</section>
+<section id="links">
+<h2>Links<a class="headerlink" href="#links" title="Link to this heading">¶</a></h2>
+<details><summary>Click Here</summary>
+ <p></br>
+<p><strong>Important Links</strong> that you may find useful:</p>
+<p><a class="reference external" href="https://www3.ntu.edu.sg/home/ehchua/programming/java/J2_Basics.html">Java Basics</a></p>
+<p><a class="reference external" href="https://www.newthinktank.com/videos/java-video-tutorial/">Java Video Tutorial</a></p>
+<p><a class="reference external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">Java Visualizer</a></p>
+<p><a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/overview-summary.html">Oracle: Class &amp; Methods</a></p>
+<p><a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">Oracle: Formatting Numeric Print</a></p>
+<p><a class="reference external" href="https://practiceit.cs.washington.edu/">Practice-It – Java</a></p>
+<p><a class="reference external" href="https://math.hws.edu/javanotes/index.html">Java Notes: Digital Book</a></p>
+ </p> </details>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="Resources/Resources.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Resources</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Mr. V
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">AP Computer Science A Course Overview</a><ul>
+<li><a class="reference internal" href="#java-at-a-glance">Java at a glance</a></li>
+<li><a class="reference internal" href="#syllabus">Syllabus</a><ul>
+<li><a class="reference internal" href="#expectations">Expectations</a></li>
+<li><a class="reference internal" href="#policy-on-academic-honesty">Policy on Academic Honesty</a></li>
+<li><a class="reference internal" href="#electronic-devices">Electronic Devices</a></li>
+<li><a class="reference internal" href="#notes-notebook">Notes/ Notebook</a></li>
+<li><a class="reference internal" href="#academic-support">Academic Support</a></li>
+<li><a class="reference internal" href="#weighted-grading">Weighted Grading</a></li>
+<li><a class="reference internal" href="#grading-scale">Grading Scale</a></li>
+<li><a class="reference internal" href="#classroom-attendance-conduct-participation-grade">Classroom Attendance, Conduct, &amp; Participation Grade</a></li>
+<li><a class="reference internal" href="#make-up-late-work-policy">Make-up &amp; Late work policy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#units-topics">Units &amp; Topics</a></li>
+<li><a class="reference internal" href="#note-taking-in-learning">Note-taking in learning</a><ul>
+<li><a class="reference internal" href="#two-purposes-for-taking-notes">Two Purposes for Taking Notes</a></li>
+<li><a class="reference internal" href="#how-note-taking-supports-learning">How Note-Taking Supports Learning</a></li>
+<li><a class="reference internal" href="#note-taking-methods">Note-taking methods</a><ul>
+<li><a class="reference internal" href="#the-cornell-method">The Cornell Method</a></li>
+<li><a class="reference internal" href="#teacher-handouts">Teacher Handouts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-tips-on-note-taking">General Tips on Note-Taking</a><ul>
+<li><a class="reference internal" href="#group-notes-a-collaborative-approach">Group Notes: A Collaborative Approach</a></li>
+<li><a class="reference internal" href="#keep-your-notes">Keep Your Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ap-computational-thinking-practices-skills">AP Computational Thinking Practices: Skills</a></li>
+<li><a class="reference internal" href="#ap-computer-science-a-vocabulary">AP Computer Science A Vocabulary</a></li>
+<li><a class="reference internal" href="#java-style-guidelines">Java Style Guidelines</a><ul>
+<li><a class="reference internal" href="#block-comment-templates-with-examples">Block Comment Templates with Examples</a></li>
+<li><a class="reference internal" href="#spaces">Spaces</a></li>
+<li><a class="reference internal" href="#braces-and-indenting">Braces and Indenting</a></li>
+<li><a class="reference internal" href="#names-and-declarations">Names and Declarations</a></li>
+<li><a class="reference internal" href="#long-lines">Long Lines</a></li>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#loops">Loops</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>
